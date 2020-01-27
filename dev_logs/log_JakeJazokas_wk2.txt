@@ -2,4 +2,6 @@
 - Updated readme.md file to have all the current info, and a list of tasks that need to be done still.
 - Added the initial (blank) andriod studio application to the git
 
-- Total time : 30min.
+- Created the initial python scraper for kijiji, which grabs listings related to students and outputs to a json file with the url and title
+
+- Total time : 2h 30min.
