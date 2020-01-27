@@ -1,0 +1,7 @@
+- Created the proposal document for deliverable one :
+  - Wrote the information for the (Page 1) specification in the document requirements.
+  - Wrote the functional properties.
+  - Wrote the non-functional properties.
+  - Created the low-fidelity mockup.
+  
+ - Total time spent : 5h.
