@@ -1,4 +1,4 @@
 - Created the documents folder, which contains all of our project documents that have been submitted thus far.
 - Updated readme.md file to have all the current info, and a list of tasks that need to be done still.
 
-- Total time : 15min.
+- Total time : 20min.
