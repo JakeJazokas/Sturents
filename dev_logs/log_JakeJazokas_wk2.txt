@@ -1,0 +1,3 @@
+- Created the documents folder, which contains all of our project documents that have been submitted thus far.
+
+- Total time : 15min.
