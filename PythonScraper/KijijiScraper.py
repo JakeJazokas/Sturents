@@ -3,7 +3,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver import Chrome
 import re
 import json
-
+import time
 
 chrome_options = Options()
 #Headless chrome
@@ -13,9 +13,24 @@ driver = webdriver.Chrome(options=chrome_options)
 start_url = "https://www.kijiji.ca/b-for-rent/ottawa/student/k0c30349001l1700185?ad=offering"
 driver.get(start_url)
 
+#Time to wait in between each page loading
+driver.set_page_load_timeout(30)
+
+#Function to get the description of a given url
+def get_listing_description(link):
+    #10 second sleep to avoid bot detection
+    time.sleep(10)
+    #Go to the URL and get the description text
+    driver.get(link)
+    description_text = driver.find_element_by_class_name('descriptionContainer-3544745383').text
+    return description_text
+
 #Function to get titles and links
 def get_titles_and_links(links):
-    titles_and_links = [{'title':link.text, "url":link.get_attribute('href')} for link in links if link.get_attribute('href') != None]
+    titles_and_links = [{'title':link.text, 'url':link.get_attribute('href'), 'description':'N/A'} for link in links if link.get_attribute('href') != None]
+    #After we have all the links for the page, update all the descriptions
+    for listing in titles_and_links:
+        listing['description'] = get_listing_description(listing['url'])
     return titles_and_links
 
 #Page 1
