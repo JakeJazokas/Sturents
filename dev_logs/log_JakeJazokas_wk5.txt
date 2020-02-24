@@ -1,0 +1,4 @@
+- Added basic support to the andriod app backend. To parse the json files that will eventually become the data that is dispalyed.
+  - Right now the app just displays all the json data.
+  
+- Total time : 2h.
