@@ -1,0 +1,11 @@
+- Added basic support to the andriod app backend. To parse the json files that will eventually become the data that is dispalyed.
+  - Right now the app just displays all the json data.
+  
+  - Added the first iteration of the ui for the application
+    - Added swiping between 'cards' to like listings
+    - Ability to 'dislike' listings
+    - Buttons also work as an alternative to swiping
+   
+ - Changed the scraper to use node instead of python and selenium.
+  
+- Total time : 5h.
