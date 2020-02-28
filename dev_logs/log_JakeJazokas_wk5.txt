@@ -8,4 +8,6 @@
    
  - Changed the scraper to use node instead of python and selenium.
   
-- Total time : 5h.
+ - Improved the UI for the App and cleaned up some code
+  
+- Total time : 7h.
