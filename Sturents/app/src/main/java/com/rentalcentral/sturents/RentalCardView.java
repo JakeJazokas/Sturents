@@ -40,7 +40,8 @@ public class RentalCardView {
 
     @Resolve
     private void onResolved(){
-        Glide.with(mContext).load(mProfile.getImageUrl()).into(profileImageView);
+        //Load the first image
+        Glide.with(mContext).load(mProfile.getFirstImage()).into(profileImageView);
         nameAgeTxt.setText(mProfile.getTitle());
         locationNameTxt.setText(mProfile.getDescription());
     }

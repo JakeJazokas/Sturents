@@ -679,6 +679,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable textview_border
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
@@ -828,6 +829,7 @@ id title
 id titleDividerNoCustom
 id title_template
 id top
+id topBarText
 id topPanel
 id uniform
 id up
@@ -882,9 +884,11 @@ layout sturents_card_view
 layout sturents_swipe_in_msg_view
 layout sturents_swipe_out_msg_view
 layout support_simple_spinner_dropdown_item
+layout top_bar_layout
 mipmap ic_launcher
 mipmap ic_launcher_round
 raw listings
+raw nodelistings
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
