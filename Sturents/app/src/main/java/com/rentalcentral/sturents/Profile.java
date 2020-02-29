@@ -61,4 +61,10 @@ public class Profile {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    //TODO Crate tostring method
+    @Override
+    public String toString() {
+        return "{ \"title\":" + title + '}';
+    }
 }

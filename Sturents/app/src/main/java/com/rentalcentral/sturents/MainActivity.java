@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //TODO Check if the local storage file is present
+        //TODO if it is present then remove saved listings that are already present
 
         //Change the top bar to use custom xml layout
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);

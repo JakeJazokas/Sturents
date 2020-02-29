@@ -16,6 +16,8 @@ import com.mindorks.placeholderview.annotations.swipe.SwipeInState;
 import com.mindorks.placeholderview.annotations.swipe.SwipeOut;
 import com.mindorks.placeholderview.annotations.swipe.SwipeOutState;
 
+import java.util.List;
+
 @Layout(R.layout.sturents_card_view)
 public class RentalCardView {
 
@@ -61,6 +63,7 @@ public class RentalCardView {
     @SwipeIn
     private void onSwipeIn(){
         //TODO save the json object to the local storage
+        Utils.createCacheFile(mContext, "config.json", mProfile.toString());
         Log.d("EVENT", "onSwipedIn");
     }
 

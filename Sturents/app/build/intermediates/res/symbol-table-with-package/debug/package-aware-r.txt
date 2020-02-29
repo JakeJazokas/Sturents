@@ -839,6 +839,7 @@ id topPanel
 id uniform
 id up
 id useLogo
+id userListingsText
 id withText
 id wrap
 id wrap_content
