@@ -76,4 +76,8 @@ public class Utils {
     public static int dpToPx(int dp) {
         return (int) (dp * Resources.getSystem().getDisplayMetrics().density);
     }
+
+    //TODO Write JSON saved data to file
+
+    //TODO Read JSON saved data from file
 }

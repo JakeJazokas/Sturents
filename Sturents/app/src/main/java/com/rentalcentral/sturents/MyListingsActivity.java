@@ -19,6 +19,7 @@ public class MyListingsActivity extends AppCompatActivity {
         getSupportActionBar().setCustomView(R.layout.top_bar_layout_back);
         getSupportActionBar().setElevation(0);
 
+        //Go back to the main activity when the back button is pressed
         ImageButton actionBarButton = findViewById(R.id.topBarButtonBack);
         actionBarButton.setOnClickListener(new View.OnClickListener() {
             @Override

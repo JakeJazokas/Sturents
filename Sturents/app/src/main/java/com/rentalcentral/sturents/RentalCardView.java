@@ -49,6 +49,7 @@ public class RentalCardView {
     @SwipeOut
     private void onSwipedOut(){
         Log.d("EVENT", "onSwipedOut");
+        //This adds the listing back to the queue of listings of the user rejects it
         mSwipeView.addView(this);
     }
 
@@ -59,6 +60,7 @@ public class RentalCardView {
 
     @SwipeIn
     private void onSwipeIn(){
+        //TODO save the json object to the local storage
         Log.d("EVENT", "onSwipedIn");
     }
 
