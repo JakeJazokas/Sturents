@@ -16,9 +16,9 @@ import com.mindorks.placeholderview.annotations.swipe.SwipeInState;
 import com.mindorks.placeholderview.annotations.swipe.SwipeOut;
 import com.mindorks.placeholderview.annotations.swipe.SwipeOutState;
 
-
 @Layout(R.layout.sturents_card_view)
 public class RentalCardView {
+
     @View(R.id.profileImageView)
     private ImageView profileImageView;
 

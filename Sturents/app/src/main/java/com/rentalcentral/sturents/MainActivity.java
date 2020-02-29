@@ -4,18 +4,15 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
-import android.text.method.ScrollingMovementMethod;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.ImageButton;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
 
-import com.google.gson.Gson;
 import com.mindorks.placeholderview.SwipeDecor;
 import com.mindorks.placeholderview.SwipePlaceHolderView;
 
@@ -67,6 +64,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mSwipeView.doSwipe(true);
+            }
+        });
+
+        //Add action listener for the image button on the action bar
+        ImageButton actionBarButton = findViewById(R.id.topBarButton);
+        actionBarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MyListingsActivity.class);
+                MainActivity.this.startActivity(intent);
             }
         });
     }

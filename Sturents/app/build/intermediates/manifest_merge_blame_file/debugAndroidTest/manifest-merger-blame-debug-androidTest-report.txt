@@ -3,35 +3,35 @@
 3    package="com.rentalcentral.sturents.test" >
 4
 5    <uses-sdk
-5-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger996254676107402106.xml:5:5-74
+5-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7107737582836335172.xml:5:5-74
 6        android:minSdkVersion="16"
-6-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger996254676107402106.xml:5:15-41
+6-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7107737582836335172.xml:5:15-41
 7        android:targetSdkVersion="29" />
-7-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger996254676107402106.xml:5:42-71
+7-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7107737582836335172.xml:5:42-71
 8
 9    <instrumentation
-9-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger996254676107402106.xml:11:5-15:76
+9-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7107737582836335172.xml:11:5-15:76
 10        android:name="androidx.test.runner.AndroidJUnitRunner"
-10-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger996254676107402106.xml:11:22-76
+10-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7107737582836335172.xml:11:22-76
 11        android:functionalTest="false"
-11-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger996254676107402106.xml:14:22-52
+11-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7107737582836335172.xml:14:22-52
 12        android:handleProfiling="false"
-12-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger996254676107402106.xml:13:22-53
+12-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7107737582836335172.xml:13:22-53
 13        android:label="Tests for com.rentalcentral.sturents"
-13-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger996254676107402106.xml:15:22-74
+13-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7107737582836335172.xml:15:22-74
 14        android:targetPackage="com.rentalcentral.sturents" />
-14-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger996254676107402106.xml:12:22-72
+14-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7107737582836335172.xml:12:22-72
 15
 16    <uses-permission android:name="android.permission.REORDER_TASKS" />
 16-->[androidx.test:core:1.1.0] C:\Users\Jake\.gradle\caches\transforms-2\files-2.1\61e5e7e4c8c93d43f3f06edf87848d5f\core-1.1.0\AndroidManifest.xml:24:5-72
 16-->[androidx.test:core:1.1.0] C:\Users\Jake\.gradle\caches\transforms-2\files-2.1\61e5e7e4c8c93d43f3f06edf87848d5f\core-1.1.0\AndroidManifest.xml:24:22-69
 17
 18    <application android:debuggable="true" >
-18-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger996254676107402106.xml:7:5-9:19
-18-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger996254676107402106.xml:7:18-43
+18-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7107737582836335172.xml:7:5-9:19
+18-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7107737582836335172.xml:7:18-43
 19        <uses-library android:name="android.test.runner" />
-19-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger996254676107402106.xml:8:9-60
-19-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger996254676107402106.xml:8:23-57
+19-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7107737582836335172.xml:8:9-60
+19-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7107737582836335172.xml:8:23-57
 20
 21        <activity
 21-->[androidx.test:core:1.1.0] C:\Users\Jake\.gradle\caches\transforms-2\files-2.1\61e5e7e4c8c93d43f3f06edf87848d5f\core-1.1.0\AndroidManifest.xml:27:9-33:20

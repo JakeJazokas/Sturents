@@ -662,7 +662,9 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable ic_back
 drawable ic_cancel
+drawable ic_hamburger
 drawable ic_heart
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -829,7 +831,10 @@ id title
 id titleDividerNoCustom
 id title_template
 id top
+id topBarButton
+id topBarButtonBack
 id topBarText
+id topBarText2
 id topPanel
 id uniform
 id up
@@ -883,8 +888,10 @@ layout select_dialog_singlechoice_material
 layout sturents_card_view
 layout sturents_swipe_in_msg_view
 layout sturents_swipe_out_msg_view
+layout sturents_user_listings
 layout support_simple_spinner_dropdown_item
 layout top_bar_layout
+layout top_bar_layout_back
 mipmap ic_launcher
 mipmap ic_launcher_round
 raw listings
