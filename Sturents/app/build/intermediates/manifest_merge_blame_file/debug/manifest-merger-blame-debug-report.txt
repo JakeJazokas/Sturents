@@ -21,11 +21,11 @@
 13-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:7:22-77
 14
 15    <application
-15-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:9:5-32:19
+15-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:9:5-40:19
 16        android:allowBackup="true"
 16-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:10:9-35
 17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-17-->[androidx.core:core:1.0.1] C:\Users\Jake\.gradle\caches\transforms-2\files-2.1\8f8ab13dc8f4e84e14a8bb3d9ac92bc4\core-1.0.1\AndroidManifest.xml:22:18-86
+17-->[androidx.core:core:1.0.1] C:\Users\Jake\.gradle\caches\transforms-2\files-2.1\51ec9767ead7a598d20dd24a7369e6f6\core-1.0.1\AndroidManifest.xml:22:18-86
 18        android:debuggable="true"
 19        android:icon="@mipmap/ic_launcher"
 19-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:11:9-43
@@ -51,20 +51,33 @@
 30                android:value=".MainActivity" />
 30-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:22:17-46
 31        </activity>
-32        <activity android:name="com.rentalcentral.sturents.MainActivity" >
+32        <activity
 32-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:25:9-31:20
-32-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:25:19-47
-33            <intent-filter>
-33-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:26:13-30:29
-34                <action android:name="android.intent.action.MAIN" />
-34-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:27:17-69
-34-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:27:25-66
-35
-36                <category android:name="android.intent.category.LAUNCHER" />
-36-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:29:17-77
-36-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:29:27-74
-37            </intent-filter>
+33            android:name="com.rentalcentral.sturents.ExpandedCardViewActivity"
+33-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:26:13-53
+34            android:parentActivityName="com.rentalcentral.sturents.MainActivity" >
+34-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:27:13-55
+35            <meta-data
+35-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:20:13-22:48
+36                android:name="android.support.PARENT_ACTIVITY"
+36-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:21:17-63
+37                android:value=".MainActivity" />
+37-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:22:17-46
 38        </activity>
-39    </application>
-40
-41</manifest>
+39        <activity android:name="com.rentalcentral.sturents.MainActivity" >
+39-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:33:9-39:20
+39-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:33:19-47
+40            <intent-filter>
+40-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:34:13-38:29
+41                <action android:name="android.intent.action.MAIN" />
+41-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:35:17-69
+41-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:35:25-66
+42
+43                <category android:name="android.intent.category.LAUNCHER" />
+43-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:37:17-77
+43-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:37:27-74
+44            </intent-filter>
+45        </activity>
+46    </application>
+47
+48</manifest>

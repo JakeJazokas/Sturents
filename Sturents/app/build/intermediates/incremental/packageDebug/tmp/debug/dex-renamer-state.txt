@@ -1,4 +1,4 @@
-#Sun Mar 01 11:45:52 EST 2020
-base.0=D\:\\NewComputerDocuments\\Sturents-Jake-Branch\\Sturents\\Sturents\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+#Sun Mar 01 12:19:55 EST 2020
+base.0=D\:\\NewComputerDocuments\\Sturents-Jake-Branch\\Sturents\\Sturents\\app\\build\\intermediates\\dex\\debug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
