@@ -82,25 +82,23 @@ public class Utils {
         return (int) (dp * Resources.getSystem().getDisplayMetrics().density);
     }
 
-    //TODO Write JSON saved data to file
-    public static File createCacheFile(Context context, String fileName, String json) {
+    //Write JSON saved data to file
+    public static File createCacheFile(Context context, String fileName, String json, boolean appendValue) {
         File cacheFile = new File(context.getFilesDir(), fileName);
         try {
-            FileWriter fw = new FileWriter(cacheFile, true);
+            FileWriter fw = new FileWriter(cacheFile, appendValue);
             BufferedWriter bw = new BufferedWriter(fw);
             bw.write(json);
             bw.close();
         } catch (IOException e) {
             e.printStackTrace();
-
-            // on exception null will be returned
             cacheFile = null;
         }
 
         return cacheFile;
     }
 
-    //TODO Read JSON saved data from file
+    //Read JSON saved data from file
     public static String readFile(File file) {
         String fileContent = "";
         try {
@@ -114,8 +112,6 @@ public class Utils {
             br.close();
         } catch (IOException e) {
             e.printStackTrace();
-
-            // on exception null will be returned
             fileContent = null;
         }
         return fileContent;

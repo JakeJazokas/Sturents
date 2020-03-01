@@ -762,6 +762,7 @@ id item_touch_helper_previous_elevation
 id left
 id line1
 id line3
+id linearUserListings
 id listMode
 id list_item
 id locationNameTxt
@@ -839,7 +840,7 @@ id topPanel
 id uniform
 id up
 id useLogo
-id userListingsText
+id userListingItem
 id withText
 id wrap
 id wrap_content

@@ -26,9 +26,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //TODO Check if the local storage file is present
-        //TODO if it is present then remove saved listings that are already present
-
         //Change the top bar to use custom xml layout
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.top_bar_layout);
@@ -36,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
 
         mSwipeView = findViewById(R.id.swipeView);
         mContext = getApplicationContext();
+
+        //TODO Check if the local storage file is present
+        //TODO if it is present then remove saved listings that are already present
+        Utils.createCacheFile(mContext, "config.json", "", false);
 
         int bottomMargin = Utils.dpToPx(120);
         Point windowSize = Utils.getDisplaySize(getWindowManager());

@@ -6,8 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
-import android.widget.TextView;
+import android.widget.LinearLayout;
+import android.widget.ListView;
 
 import java.io.File;
 
@@ -28,8 +30,8 @@ public class MyListingsActivity extends AppCompatActivity {
         String JSONProfiles = Utils.readFile(cacheFile);
         Log.d("SAVED", JSONProfiles);
 
-        TextView temp = findViewById(R.id.userListingsText);
-        temp.setText(JSONProfiles);
+        //Split at the end of the title value
+        populateView(JSONProfiles.split("~END~"));
 
         //Go back to the main activity when the back button is pressed
         ImageButton actionBarButton = findViewById(R.id.topBarButtonBack);
@@ -39,5 +41,17 @@ public class MyListingsActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    //Populate the view with saved listings
+    private void populateView(String[] values){
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.sturents_user_listings, R.id.userListingItem, values);
+
+        ListView listViewItems = new ListView(this);
+        listViewItems.setAdapter(adapter);
+        listViewItems.setOnItemClickListener(new OnListingClickListenerListViewItem());
+
+        LinearLayout linear = findViewById(R.id.linearUserListings);
+        linear.addView(listViewItems);
     }
 }

@@ -62,8 +62,7 @@ public class RentalCardView {
 
     @SwipeIn
     private void onSwipeIn(){
-        //TODO save the json object to the local storage
-        Utils.createCacheFile(mContext, "config.json", mProfile.toString());
+        Utils.createCacheFile(mContext, "config.json", mProfile.getTitle() + "~END~", true);
         Log.d("EVENT", "onSwipedIn");
     }
 
