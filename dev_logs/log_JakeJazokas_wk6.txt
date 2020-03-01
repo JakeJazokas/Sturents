@@ -1,0 +1,6 @@
+- Added functionality to save 'liked' listings to the local device, and then populate the 'my listings' view with all saved listings.
+  - Also each one has an empty onClick listener for now that will be used to email the poster
+  
+- Added the ability to click on a card view and show an expanded version of that listing with more detail
+
+- Total time : 5h
