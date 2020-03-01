@@ -13,6 +13,11 @@ import com.google.gson.GsonBuilder;
 
 import org.json.JSONArray;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -75,5 +80,40 @@ public class Utils {
     //Convert DP to pixels
     public static int dpToPx(int dp) {
         return (int) (dp * Resources.getSystem().getDisplayMetrics().density);
+    }
+
+    //Write JSON saved data to file
+    public static File createCacheFile(Context context, String fileName, String json, boolean appendValue) {
+        File cacheFile = new File(context.getFilesDir(), fileName);
+        try {
+            FileWriter fw = new FileWriter(cacheFile, appendValue);
+            BufferedWriter bw = new BufferedWriter(fw);
+            bw.write(json);
+            bw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+            cacheFile = null;
+        }
+
+        return cacheFile;
+    }
+
+    //Read JSON saved data from file
+    public static String readFile(File file) {
+        String fileContent = "";
+        try {
+            String currentLine;
+            BufferedReader br = new BufferedReader(new FileReader(file));
+
+            while ((currentLine = br.readLine()) != null) {
+                fileContent += currentLine + '\n';
+            }
+
+            br.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+            fileContent = null;
+        }
+        return fileContent;
     }
 }
