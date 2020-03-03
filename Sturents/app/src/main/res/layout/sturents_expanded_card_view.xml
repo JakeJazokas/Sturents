@@ -53,7 +53,11 @@
                 android:textSize="20sp"
                 android:textColor="#ffffff"
                 android:gravity="center"
-                android:background="#e04f5f"/>
+                android:background="#e04f5f"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"/>
 
         </androidx.cardview.widget.CardView>
 
@@ -74,8 +78,13 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/expandedDescription"
                     android:textSize="18sp"
-                    android:textColor="#222222"/>
-                
+                    android:textColor="#222222"
+                    android:background="#ffffff"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"/>
+
             </ScrollView>
 
         </androidx.cardview.widget.CardView>

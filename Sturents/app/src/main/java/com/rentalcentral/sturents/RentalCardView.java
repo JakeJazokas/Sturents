@@ -54,8 +54,7 @@ public class RentalCardView {
         Intent intent = new Intent(mContext, ExpandedCardViewActivity.class);
         //Flag for starting activity outside of main
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        //Send the url, description, and title values to the new activity
-        //TODO change this to use all the image urls
+        //Send the image urls, description, and title values to the new activity
         intent.putExtra("listingImages", mProfile.getImages());
         intent.putExtra("listingDescription", mProfile.getFullDescription());
         intent.putExtra("listingTitle", mProfile.getTitle());
