@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.smarteist.autoimageslider.SliderViewAdapter;
 
 import java.util.ArrayList;
@@ -55,7 +56,7 @@ public class SliderAdapter extends SliderViewAdapter<SliderAdapter.SliderAdapter
         viewHolder.textViewDescription.setTextColor(Color.WHITE);
         Glide.with(viewHolder.itemView.getContext())
                 .load(sliderItem)
-                .fitCenter()
+                .apply(RequestOptions.fitCenterTransform())
                 .into(viewHolder.imageViewBackground);
 
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {

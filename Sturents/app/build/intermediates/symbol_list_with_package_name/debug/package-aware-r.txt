@@ -970,6 +970,7 @@ id unchecked
 id uniform
 id up
 id useLogo
+id userListingCardImage
 id userListingCardText
 id vertical
 id vp_slider_layout

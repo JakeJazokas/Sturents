@@ -75,7 +75,7 @@ public class RentalCardView {
 
     @SwipeIn
     private void onSwipeIn(){
-        Utils.createCacheFile(mContext, "config.json", mProfile.getTitle() + "~END~", true);
+        Utils.createCacheFile(mContext, "config.json", mProfile.getTitle() + "~END~" + mProfile.getFirstImage() + "~END~", true);
         Log.d("EVENT", "onSwipedIn");
     }
 
