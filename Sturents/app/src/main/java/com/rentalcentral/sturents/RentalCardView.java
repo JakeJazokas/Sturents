@@ -56,7 +56,7 @@ public class RentalCardView {
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         //Send the url, description, and title values to the new activity
         //TODO change this to use all the image urls
-        intent.putExtra("imgUrl", mProfile.getFirstImage());
+        intent.putExtra("listingImages", mProfile.getImages());
         intent.putExtra("listingDescription", mProfile.getFullDescription());
         intent.putExtra("listingTitle", mProfile.getTitle());
         mContext.startActivity(intent);

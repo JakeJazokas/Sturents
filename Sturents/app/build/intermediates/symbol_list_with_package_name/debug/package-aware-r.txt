@@ -265,6 +265,22 @@ attr paddingTopNoTitle
 attr panelBackground
 attr panelMenuListTheme
 attr panelMenuListWidth
+attr piv_animationDuration
+attr piv_animationType
+attr piv_autoVisibility
+attr piv_count
+attr piv_dynamicCount
+attr piv_interactiveAnimation
+attr piv_orientation
+attr piv_padding
+attr piv_radius
+attr piv_rtl_mode
+attr piv_scaleFactor
+attr piv_select
+attr piv_selectedColor
+attr piv_strokeWidth
+attr piv_unselectedColor
+attr piv_viewPager
 attr popupMenuStyle
 attr popupTheme
 attr popupWindowStyle
@@ -289,6 +305,24 @@ attr showDividers
 attr showText
 attr showTitle
 attr singleChoiceItemLayout
+attr sliderAnimationDuration
+attr sliderAutoCycleDirection
+attr sliderAutoCycleEnabled
+attr sliderIndicatorAnimationDuration
+attr sliderIndicatorGravity
+attr sliderIndicatorMargin
+attr sliderIndicatorMarginBottom
+attr sliderIndicatorMarginLeft
+attr sliderIndicatorMarginRight
+attr sliderIndicatorMarginTop
+attr sliderIndicatorOrientation
+attr sliderIndicatorPadding
+attr sliderIndicatorRadius
+attr sliderIndicatorRtlMode
+attr sliderIndicatorSelectedColor
+attr sliderIndicatorUnselectedColor
+attr sliderScrollTimeInSec
+attr sliderStartAutoCycle
 attr spanCount
 attr spinBars
 attr spinnerDropDownItemStyle
@@ -715,6 +749,8 @@ id alertTitle
 id all
 id always
 id async
+id auto
+id back_and_forth
 id barrier
 id beginning
 id blocking
@@ -729,31 +765,36 @@ id chronometer
 id clip_horizontal
 id clip_vertical
 id collapseActionView
+id color
 id content
 id contentPanel
 id custom
 id customPanel
+id cv_slider_mainActivity
 id decor_content_parent
 id default_activity_button
 id dimensions
 id direct
 id disableHome
+id drop
 id edit_query
 id end
 id expand_activities_button
 id expandedDescription
-id expandedImage
+id expandedImageSlider
 id expandedTitle
 id expanded_menu
 id fill
 id fill_horizontal
 id fill_vertical
+id fl_shadow_container
 id forever
 id gone
 id group_divider
 id groups
 id home
 id homeAsUp
+id horizontal
 id icon
 id icon_group
 id ifRoom
@@ -762,6 +803,8 @@ id info
 id invisible
 id italic
 id item_touch_helper_previous_elevation
+id iv_auto_image_slider
+id iv_gif_container
 id left
 id line1
 id line3
@@ -779,7 +822,10 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id off
+id on
 id packed
+id pager_indicator
 id parent
 id parentPanel
 id percent
@@ -791,6 +837,8 @@ id rejectBtn
 id right
 id right_icon
 id right_side
+id scale
+id scale_down
 id screen
 id scrollIndicatorDown
 id scrollIndicatorUp
@@ -810,6 +858,7 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id slide
 id spacer
 id split_action_bar
 id spread
@@ -821,6 +870,7 @@ id standard
 id start
 id submenuarrow
 id submit_area
+id swap
 id swipeView
 id tabMode
 id tag_transition_group
@@ -830,6 +880,7 @@ id text
 id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
+id thinWorm
 id time
 id title
 id titleDividerNoCustom
@@ -840,11 +891,15 @@ id topBarButtonBack
 id topBarText
 id topBarText2
 id topPanel
+id tv_auto_image_slider
 id uniform
 id up
 id useLogo
 id userListingItem
+id vertical
+id vp_slider_layout
 id withText
+id worm
 id wrap
 id wrap_content
 integer abc_config_activityDefaultDur
@@ -881,6 +936,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout image_slider_layout
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big
@@ -890,6 +946,7 @@ layout notification_template_part_time
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout slider_view
 layout sturents_card_view
 layout sturents_expanded_card_view
 layout sturents_swipe_in_msg_view
@@ -1331,11 +1388,13 @@ styleable ListPopupWindow android_dropDownHorizontalOffset android_dropDownVerti
 styleable MenuGroup android_enabled android_id android_visible android_menuCategory android_orderInCategory android_checkableBehavior
 styleable MenuItem android_icon android_enabled android_id android_checked android_visible android_menuCategory android_orderInCategory android_title android_titleCondensed android_alphabeticShortcut android_numericShortcut android_checkable android_onClick actionLayout actionProviderClass actionViewClass alphabeticModifiers contentDescription iconTint iconTintMode numericModifiers showAsAction tooltipText
 styleable MenuView android_windowAnimationStyle android_itemTextAppearance android_horizontalDivider android_verticalDivider android_headerBackground android_itemBackground android_itemIconDisabledAlpha preserveIconSpacing subMenuArrow
+styleable PageIndicatorView piv_animationDuration piv_animationType piv_autoVisibility piv_count piv_dynamicCount piv_interactiveAnimation piv_orientation piv_padding piv_radius piv_rtl_mode piv_scaleFactor piv_select piv_selectedColor piv_strokeWidth piv_unselectedColor piv_viewPager
 styleable PopupWindow android_popupBackground android_popupAnimationStyle overlapAnchor
 styleable PopupWindowBackgroundState state_above_anchor
 styleable RecycleListView paddingBottomNoButtons paddingTopNoTitle
 styleable RecyclerView android_orientation android_descendantFocusability fastScrollEnabled fastScrollHorizontalThumbDrawable fastScrollHorizontalTrackDrawable fastScrollVerticalThumbDrawable fastScrollVerticalTrackDrawable layoutManager reverseLayout spanCount stackFromEnd
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon
+styleable SliderView sliderAnimationDuration sliderAutoCycleDirection sliderAutoCycleEnabled sliderIndicatorAnimationDuration sliderIndicatorGravity sliderIndicatorMargin sliderIndicatorMarginBottom sliderIndicatorMarginLeft sliderIndicatorMarginRight sliderIndicatorMarginTop sliderIndicatorOrientation sliderIndicatorPadding sliderIndicatorRadius sliderIndicatorRtlMode sliderIndicatorSelectedColor sliderIndicatorUnselectedColor sliderScrollTimeInSec sliderStartAutoCycle
 styleable Spinner android_entries android_popupBackground android_prompt android_dropDownWidth popupTheme
 styleable StateListDrawable android_dither android_visible android_variablePadding android_constantSize android_enterFadeDuration android_exitFadeDuration
 styleable StateListDrawableItem android_drawable

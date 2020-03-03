@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\NewComputerDocuments\\Sturents-Jake-Branch\\Sturents\\Sturents\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
+            "outputFile": "C:\\Users\\JakeJ\\StudioProjects\\Sturents\\Sturents\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Jake\\.gradle\\caches\\transforms-2\\files-2.1\\7805427e3445d32c2ff10acb510a061d\\appcompat-1.0.2\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\JakeJ\\.gradle\\caches\\transforms-2\\files-2.1\\7805427e3445d32c2ff10acb510a061d\\appcompat-1.0.2\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
