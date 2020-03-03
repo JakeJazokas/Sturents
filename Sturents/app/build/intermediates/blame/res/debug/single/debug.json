@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\JakeJ\\StudioProjects\\Sturents\\Sturents\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\JakeJ\\StudioProjects\\Sturents\\Sturents\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
-    },
-    {
         "merged": "C:\\Users\\JakeJ\\StudioProjects\\Sturents\\Sturents\\app\\build\\intermediates\\res\\merged\\debug\\layout_sturents_swipe_out_msg_view.xml.flat",
         "source": "C:\\Users\\JakeJ\\StudioProjects\\Sturents\\Sturents\\app\\src\\main\\res\\layout\\sturents_swipe_out_msg_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\JakeJ\\StudioProjects\\Sturents\\Sturents\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\JakeJ\\StudioProjects\\Sturents\\Sturents\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
     },
     {
         "merged": "C:\\Users\\JakeJ\\StudioProjects\\Sturents\\Sturents\\app\\build\\intermediates\\res\\merged\\debug\\layout_sturents_expanded_card_view.xml.flat",

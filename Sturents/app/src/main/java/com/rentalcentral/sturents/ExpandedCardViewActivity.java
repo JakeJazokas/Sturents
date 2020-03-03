@@ -36,11 +36,9 @@ public class ExpandedCardViewActivity extends AppCompatActivity {
 
             TextView expandedDescription = findViewById(R.id.expandedDescription);
             TextView expandedTitle = findViewById(R.id.expandedTitle);
-            //ImageView expandedImage = findViewById(R.id.expandedImage);
 
             expandedDescription.setText(description);
             expandedTitle.setText(title);
-            //Glide.with(getApplicationContext()).load(imageUrl).into(expandedImage);
 
             SliderView sliderView = findViewById(R.id.expandedImageSlider);
             SliderAdapter adapter = new SliderAdapter(this);
@@ -48,7 +46,7 @@ public class ExpandedCardViewActivity extends AppCompatActivity {
             for(int i = 0; i < images.length; i++){
                 adapter.addItem(images[i]);
             }
-            
+
             sliderView.setSliderAdapter(adapter);
             sliderView.setIndicatorAnimation(IndicatorAnimations.WORM); //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
             sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);

@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#dddddd">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -37,25 +38,47 @@
 
         </androidx.cardview.widget.CardView>
 
-<!--        <ImageView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="400dp"-->
-<!--            android:id="@+id/expandedImage"/>-->
-
-        <TextView
+        <androidx.cardview.widget.CardView
+            android:id="@+id/expandedTitleBar"
+            app:cardCornerRadius="6dp"
+            android:layout_margin="16dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/expandedTitle"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:textColor="#000000"/>
+            android:layout_height="wrap_content">
 
-        <TextView
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/expandedTitle"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:background="#e04f5f"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/expandedDescriptionBar"
+            app:cardCornerRadius="6dp"
+            android:layout_margin="16dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/expandedDescription"
-            android:textSize="18sp"
-            android:textColor="#222222"/>
+            android:layout_height="wrap_content">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:fillViewport="true"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/expandedDescription"
+                    android:textSize="18sp"
+                    android:textColor="#222222"/>
+                
+            </ScrollView>
+
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 

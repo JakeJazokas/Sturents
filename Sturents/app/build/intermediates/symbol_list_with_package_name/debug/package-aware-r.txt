@@ -781,8 +781,10 @@ id edit_query
 id end
 id expand_activities_button
 id expandedDescription
+id expandedDescriptionBar
 id expandedImageSlider
 id expandedTitle
+id expandedTitleBar
 id expanded_menu
 id fill
 id fill_horizontal
