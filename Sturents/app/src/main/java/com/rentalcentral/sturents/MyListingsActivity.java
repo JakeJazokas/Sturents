@@ -2,6 +2,9 @@ package com.rentalcentral.sturents;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -12,6 +15,8 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class MyListingsActivity extends AppCompatActivity {
 
@@ -45,13 +50,17 @@ public class MyListingsActivity extends AppCompatActivity {
 
     //Populate the view with saved listings
     private void populateView(String[] values){
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.sturents_user_listings, R.id.userListingItem, values);
+        ArrayList<String> myValues = new ArrayList<String>();
 
-        ListView listViewItems = new ListView(this);
-        listViewItems.setAdapter(adapter);
-        listViewItems.setOnItemClickListener(new OnListingClickListenerListViewItem());
+        myValues.addAll(Arrays.asList(values).subList(0,values.length-1));
 
-        LinearLayout linear = findViewById(R.id.linearUserListings);
-        linear.addView(listViewItems);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(myValues);
+        RecyclerView myView = findViewById(R.id.recyclerview);
+        myView.setHasFixedSize(true);
+        myView.setAdapter(adapter);
+
+        LinearLayoutManager llm = new LinearLayoutManager(this);
+        llm.setOrientation(LinearLayoutManager.VERTICAL);
+        myView.setLayoutManager(llm);
     }
 }

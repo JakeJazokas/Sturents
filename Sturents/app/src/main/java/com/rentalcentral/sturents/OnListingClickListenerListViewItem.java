@@ -13,7 +13,7 @@ public class OnListingClickListenerListViewItem implements AdapterView.OnItemCli
 
         Context context = view.getContext();
 
-        TextView textViewItem = (view.findViewById(R.id.userListingItem));
+        TextView textViewItem = (view.findViewById(R.id.userListingCardText));
 
         String listItemText = textViewItem.getText().toString();
 
