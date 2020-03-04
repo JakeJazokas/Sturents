@@ -1,16 +1,13 @@
 package com.rentalcentral.sturents;
 
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.bumptech.glide.Glide;
 import com.smarteist.autoimageslider.IndicatorAnimations;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
@@ -48,7 +45,7 @@ public class ExpandedCardViewActivity extends AppCompatActivity {
             }
 
             sliderView.setSliderAdapter(adapter);
-            sliderView.setIndicatorAnimation(IndicatorAnimations.WORM); //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
+            sliderView.setIndicatorAnimation(IndicatorAnimations.WORM);
             sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
         }
 
