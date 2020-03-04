@@ -2,22 +2,16 @@ package com.rentalcentral.sturents;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
-import android.widget.ListView;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class MyListingsActivity extends AppCompatActivity {
 
@@ -63,9 +57,6 @@ public class MyListingsActivity extends AppCompatActivity {
 
     //Populate the view with saved listings
     private void populateView(ArrayList<String> titleVals, ArrayList<String> imageVals){
-//        ArrayList<String> myValues = new ArrayList<String>();
-//        myValues.addAll(Arrays.asList(values).subList(0,values.length-1));
-
         RecyclerViewAdapter adapter = new RecyclerViewAdapter(titleVals, imageVals);
         RecyclerView myView = findViewById(R.id.recyclerview);
         myView.setHasFixedSize(true);
