@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:2:1-43:12
+ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:2:1-51:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Jake\.gradle\caches\transforms-2\files-2.1\f7fa931c10060cb31b4ececcd856b65d\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Jake\.gradle\caches\transforms-2\files-2.1\75fe1a0d0ea641341446dfd6b8974e96\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
 MERGED from [com.mindorks:placeholderview:0.7.1] C:\Users\Jake\.gradle\caches\transforms-2\files-2.1\91c9fb3994068cb1fbb1dd78aa4f0be8\jetified-placeholderview-0.7.1\AndroidManifest.xml:2:1-12:12
@@ -29,20 +29,20 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Jake\.gradle\cac
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Jake\.gradle\caches\transforms-2\files-2.1\54ec9a60a0f20829d9c5323f1ce0908c\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Jake\.gradle\caches\transforms-2\files-2.1\0571339fd4cb74441b19561f6766bb98\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Jake\.gradle\caches\transforms-2\files-2.1\0f91f258f9d0abaa0e56c019df47bd85\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:2:1-43:12
+INJECTED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:2:1-51:12
 	package
 		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:3:5-41
 		INJECTED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml
 		INJECTED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml
-		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:2:1-43:12
+		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:2:1-51:12
 		INJECTED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml
-		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:2:1-43:12
+		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:2:1-51:12
 		INJECTED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:2:11-69
@@ -59,7 +59,7 @@ ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\sr
 	android:name
 		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:7:22-77
 application
-ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:9:5-41:19
+ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:9:5-49:19
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Jake\.gradle\caches\transforms-2\files-2.1\75fe1a0d0ea641341446dfd6b8974e96\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Jake\.gradle\caches\transforms-2\files-2.1\75fe1a0d0ea641341446dfd6b8974e96\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [com.github.smarteist:autoimageslider:1.3.5] C:\Users\Jake\.gradle\caches\transforms-2\files-2.1\f5b9208e841625c65c0897cd3f84a980\jetified-autoimageslider-1.3.5\AndroidManifest.xml:11:5-15:19
@@ -94,26 +94,32 @@ ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\sr
 		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:22:17-46
 	android:name
 		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:21:17-63
-activity#com.rentalcentral.sturents.ExpandedCardViewActivity
+activity#com.rentalcentral.sturents.MySettingsActivity
 ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:25:9-31:20
 	android:parentActivityName
 		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:27:13-55
 	android:name
-		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:26:13-53
-activity#com.rentalcentral.sturents.MainActivity
+		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:26:13-47
+activity#com.rentalcentral.sturents.ExpandedCardViewActivity
 ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:33:9-39:20
+	android:parentActivityName
+		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:35:13-55
 	android:name
-		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:33:19-47
+		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:34:13-53
+activity#com.rentalcentral.sturents.MainActivity
+ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:41:9-47:20
+	android:name
+		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:41:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:34:13-38:29
+ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:42:13-46:29
 action#android.intent.action.MAIN
-ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:35:17-69
+ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:43:17-69
 	android:name
-		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:35:25-66
+		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:43:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:37:17-77
+ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:45:17-77
 	android:name
-		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:37:27-74
+		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:45:27-74
 uses-sdk
 INJECTED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml

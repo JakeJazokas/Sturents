@@ -48,12 +48,20 @@
         "source": "D:\\NewComputerDocuments\\Sturents-Jake-Branch\\Sturents\\Sturents\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_background.png"
     },
     {
+        "merged": "D:\\NewComputerDocuments\\Sturents-Jake-Branch\\Sturents\\Sturents\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_settings.png.flat",
+        "source": "D:\\NewComputerDocuments\\Sturents-Jake-Branch\\Sturents\\Sturents\\app\\src\\main\\res\\drawable\\ic_settings.png"
+    },
+    {
         "merged": "D:\\NewComputerDocuments\\Sturents-Jake-Branch\\Sturents\\Sturents\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "D:\\NewComputerDocuments\\Sturents-Jake-Branch\\Sturents\\Sturents\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
         "merged": "D:\\NewComputerDocuments\\Sturents-Jake-Branch\\Sturents\\Sturents\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
         "source": "D:\\NewComputerDocuments\\Sturents-Jake-Branch\\Sturents\\Sturents\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "D:\\NewComputerDocuments\\Sturents-Jake-Branch\\Sturents\\Sturents\\app\\build\\intermediates\\res\\merged\\debug\\layout_sturents_settings_layout.xml.flat",
+        "source": "D:\\NewComputerDocuments\\Sturents-Jake-Branch\\Sturents\\Sturents\\app\\src\\main\\res\\layout\\sturents_settings_layout.xml"
     },
     {
         "merged": "D:\\NewComputerDocuments\\Sturents-Jake-Branch\\Sturents\\Sturents\\app\\build\\intermediates\\res\\merged\\debug\\layout_sturents_card_view.xml.flat",
@@ -110,6 +118,10 @@
     {
         "merged": "D:\\NewComputerDocuments\\Sturents-Jake-Branch\\Sturents\\Sturents\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",
         "source": "D:\\NewComputerDocuments\\Sturents-Jake-Branch\\Sturents\\Sturents\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "D:\\NewComputerDocuments\\Sturents-Jake-Branch\\Sturents\\Sturents\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_my_listings.png.flat",
+        "source": "D:\\NewComputerDocuments\\Sturents-Jake-Branch\\Sturents\\Sturents\\app\\src\\main\\res\\drawable\\ic_my_listings.png"
     },
     {
         "merged": "D:\\NewComputerDocuments\\Sturents-Jake-Branch\\Sturents\\Sturents\\app\\build\\intermediates\\res\\merged\\debug\\layout_sturents_expanded_card_view.xml.flat",
