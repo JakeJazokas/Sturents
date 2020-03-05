@@ -734,7 +734,9 @@ drawable ic_hamburger
 drawable ic_heart
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_my_listings
 drawable ic_profile
+drawable ic_settings
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -962,6 +964,7 @@ id title_template
 id top
 id topBarButton
 id topBarButtonBack
+id topBarSettingsButton
 id topBarText
 id topBarText2
 id topPanel
@@ -1033,6 +1036,7 @@ layout select_dialog_singlechoice_material
 layout slider_view
 layout sturents_card_view
 layout sturents_expanded_card_view
+layout sturents_settings_layout
 layout sturents_swipe_in_msg_view
 layout sturents_swipe_out_msg_view
 layout sturents_user_listing_card

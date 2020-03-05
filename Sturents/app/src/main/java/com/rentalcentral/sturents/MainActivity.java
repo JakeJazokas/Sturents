@@ -80,5 +80,14 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.this.startActivity(intent);
             }
         });
+
+        ImageButton actionBarSettingsButton = findViewById(R.id.topBarSettingsButton);
+        actionBarSettingsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MySettingsActivity.class);
+                MainActivity.this.startActivity(intent);
+            }
+        });
     }
 }

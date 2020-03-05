@@ -31,6 +31,13 @@
                 android:value=".MainActivity" />
         </activity>
         <activity
+            android:name="com.rentalcentral.sturents.MySettingsActivity"
+            android:parentActivityName="com.rentalcentral.sturents.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
             android:name="com.rentalcentral.sturents.ExpandedCardViewActivity"
             android:parentActivityName="com.rentalcentral.sturents.MainActivity" >
             <meta-data
