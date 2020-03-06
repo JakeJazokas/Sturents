@@ -15,10 +15,13 @@ import java.util.List;
 
 import com.mindorks.placeholderview.SwipeDecor;
 import com.mindorks.placeholderview.SwipePlaceHolderView;
-import com.rentalcentral.sturents.model.Profile;
+import com.rentalcentral.sturents.model.Listing;
 import com.rentalcentral.sturents.R;
+import com.rentalcentral.sturents.model.SavedListingArray;
 import com.rentalcentral.sturents.ui.RentalCardView;
-import com.rentalcentral.sturents.utils.Utils;
+import com.rentalcentral.sturents.utils.DisplayUtils;
+import com.rentalcentral.sturents.utils.FileUtils;
+import com.rentalcentral.sturents.utils.JsonUtils;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,10 +43,12 @@ public class MainActivity extends AppCompatActivity {
 
         //TODO Check if the local storage file is present
         //TODO if it is present then remove saved listings that are already present
-        Utils.createCacheFile(mContext, "config.json", "", false);
+        FileUtils.createCacheFile(mContext, "saved_data.srl", "", false);
+        //Write blank array
+        FileUtils.writeSerializableListingArray(mContext, new SavedListingArray(), "saved_data.srl");
 
-        int bottomMargin = Utils.dpToPx(120);
-        Point windowSize = Utils.getDisplaySize(getWindowManager());
+        int bottomMargin = DisplayUtils.dpToPx(120);
+        Point windowSize = DisplayUtils.getDisplaySize(getWindowManager());
         mSwipeView.getBuilder()
                 .setDisplayViewCount(3)
                 .setSwipeDecor(new SwipeDecor()
@@ -55,10 +60,10 @@ public class MainActivity extends AppCompatActivity {
                         .setSwipeInMsgLayoutId(R.layout.sturents_swipe_in_msg_view)
                         .setSwipeOutMsgLayoutId(R.layout.sturents_swipe_out_msg_view));
 
-        List<Profile> profileList = Utils.loadProfiles(this.getApplicationContext());
+        List<Listing> listingList = JsonUtils.loadProfiles(this.getApplicationContext());
 
-        for(Profile profile : profileList){
-            mSwipeView.addView(new RentalCardView(mContext, profile, mSwipeView));
+        for(Listing listing : listingList){
+            mSwipeView.addView(new RentalCardView(mContext, listing, mSwipeView));
         }
 
         findViewById(R.id.rejectBtn).setOnClickListener(new View.OnClickListener() {

@@ -817,6 +817,7 @@ id alertTitle
 id always
 id async
 id auto
+id auto_image_slider
 id back_and_forth
 id barrier
 id beginning
@@ -841,6 +842,7 @@ id customPanel
 id cv_slider_mainActivity
 id decor_content_parent
 id default_activity_button
+id descriptionTxt
 id dialog_button
 id dimensions
 id direct
@@ -858,7 +860,6 @@ id expanded_menu
 id fill
 id fill_horizontal
 id fill_vertical
-id fl_shadow_container
 id forever
 id gone
 id group_divider
@@ -874,18 +875,14 @@ id info
 id invisible
 id italic
 id item_touch_helper_previous_elevation
-id iv_auto_image_slider
-id iv_gif_container
 id left
 id line1
 id line3
 id listMode
 id list_item
-id locationNameTxt
 id message
 id middle
 id multiply
-id nameAgeTxt
 id never
 id none
 id normal
@@ -960,6 +957,7 @@ id thinWorm
 id time
 id title
 id titleDividerNoCustom
+id titleTxt
 id title_template
 id top
 id topBarButton
@@ -968,7 +966,6 @@ id topBarSettingsButton
 id topBarText
 id topBarText2
 id topPanel
-id tv_auto_image_slider
 id unchecked
 id uniform
 id up

@@ -6,15 +6,15 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 
 import com.rentalcentral.sturents.R;
 import com.rentalcentral.sturents.adapters.RecyclerViewAdapter;
-import com.rentalcentral.sturents.utils.Utils;
+import com.rentalcentral.sturents.model.Listing;
+import com.rentalcentral.sturents.model.SavedListingArray;
+import com.rentalcentral.sturents.utils.FileUtils;
 
-import java.io.File;
 import java.util.ArrayList;
 
 public class MyListingsActivity extends AppCompatActivity {
@@ -29,25 +29,9 @@ public class MyListingsActivity extends AppCompatActivity {
         getSupportActionBar().setCustomView(R.layout.top_bar_layout_back);
         getSupportActionBar().setElevation(0);
 
-        //Load cached file
-        File cacheFile = new File(getFilesDir(), "config.json");
-        String JSONProfiles = Utils.readFile(cacheFile);
-        Log.d("SAVED", JSONProfiles);
-
-        //Split at the value ~END~
-        String[] values = JSONProfiles.split("~END~");
-        //Split into title and image values
-        ArrayList<String> titleValues = new ArrayList<String>();
-        ArrayList<String> imageValues = new ArrayList<String>();
-        for(int i = 0; i < values.length-1; i++){
-            if(i%2==0){
-                titleValues.add(values[i]);
-            }
-            else{
-                imageValues.add(values[i]);
-            }
-        }
-        populateView(titleValues, imageValues);
+        //Get saved listings and populate view
+        ArrayList<ArrayList<String>> values = getSavedListingValues();
+        populateView(values.get(0), values.get(1));
 
         //Go back to the main activity when the back button is pressed
         ImageButton actionBarButton = findViewById(R.id.topBarButtonBack);
@@ -57,6 +41,22 @@ public class MyListingsActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+    }
+
+    private ArrayList<ArrayList<String>> getSavedListingValues(){
+        //Load cached file
+        SavedListingArray savedListings = FileUtils.readSerializableListingArray(getApplicationContext(), "saved_data.srl");
+        ArrayList<String> titleValues = new ArrayList<String>();
+        ArrayList<String> imageValues = new ArrayList<String>();
+        for(Listing l : savedListings.getListings()){
+            titleValues.add(l.getTitle());
+            imageValues.add(l.getFirstImage());
+        }
+        ArrayList<ArrayList<String>> outArray = new ArrayList<ArrayList<String>>();
+        outArray.add(titleValues);
+        outArray.add(imageValues);
+        return outArray;
     }
 
     //Populate the view with saved listings
@@ -65,7 +65,6 @@ public class MyListingsActivity extends AppCompatActivity {
         RecyclerView myView = findViewById(R.id.recyclerview);
         myView.setHasFixedSize(true);
         myView.setAdapter(adapter);
-
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         myView.setLayoutManager(llm);

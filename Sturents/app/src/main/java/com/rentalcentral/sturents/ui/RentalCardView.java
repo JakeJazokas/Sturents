@@ -2,7 +2,6 @@ package com.rentalcentral.sturents.ui;
 
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -19,8 +18,9 @@ import com.mindorks.placeholderview.annotations.swipe.SwipeOut;
 import com.mindorks.placeholderview.annotations.swipe.SwipeOutState;
 import com.rentalcentral.sturents.R;
 import com.rentalcentral.sturents.activities.ExpandedCardViewActivity;
-import com.rentalcentral.sturents.model.Profile;
-import com.rentalcentral.sturents.utils.Utils;
+import com.rentalcentral.sturents.model.Listing;
+import com.rentalcentral.sturents.model.SavedListingArray;
+import com.rentalcentral.sturents.utils.FileUtils;
 
 @Layout(R.layout.sturents_card_view)
 public class RentalCardView {
@@ -28,68 +28,62 @@ public class RentalCardView {
     @View(R.id.profileImageView)
     private ImageView profileImageView;
 
-    @View(R.id.nameAgeTxt)
-    private TextView nameAgeTxt;
+    @View(R.id.titleTxt)
+    private TextView titleTxt;
 
-    @View(R.id.locationNameTxt)
-    private TextView locationNameTxt;
+    @View(R.id.descriptionTxt)
+    private TextView descriptionTxt;
 
-    private Profile mProfile;
+    private Listing mListing;
     private Context mContext;
     private SwipePlaceHolderView mSwipeView;
 
-    public RentalCardView(Context context, Profile profile, SwipePlaceHolderView swipeView) {
+    public RentalCardView(Context context, Listing listing, SwipePlaceHolderView swipeView) {
         mContext = context;
-        mProfile = profile;
+        mListing = listing;
         mSwipeView = swipeView;
     }
 
     @Resolve
     private void onResolved(){
         //Load the first image
-        Glide.with(mContext).load(mProfile.getFirstImage()).into(profileImageView);
-        nameAgeTxt.setText(mProfile.getTitle());
-        locationNameTxt.setText(mProfile.getDescription());
+        Glide.with(mContext).load(mListing.getFirstImage()).into(profileImageView);
+        titleTxt.setText(mListing.getTitle());
+        descriptionTxt.setText(mListing.getDescription());
     }
 
     @Click(R.id.profileImageView)
     private void onClickedCardImage(){
-        Log.d("EVENT", "clickedCardImage");
         Intent intent = new Intent(mContext, ExpandedCardViewActivity.class);
         //Flag for starting activity outside of main
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         //Send the image urls, description, and title values to the new activity
-        intent.putExtra("listingImages", mProfile.getImages());
-        intent.putExtra("listingDescription", mProfile.getFullDescription());
-        intent.putExtra("listingTitle", mProfile.getTitle());
+        intent.putExtra("listingImages", mListing.getImages());
+        intent.putExtra("listingDescription", mListing.getFullDescription());
+        intent.putExtra("listingTitle", mListing.getTitle());
         mContext.startActivity(intent);
     }
 
     @SwipeOut
     private void onSwipedOut(){
-        Log.d("EVENT", "onSwipedOut");
         //This adds the listing back to the queue of listings of the user rejects it
         mSwipeView.addView(this);
     }
 
     @SwipeCancelState
-    private void onSwipeCancelState(){
-        Log.d("EVENT", "onSwipeCancelState");
-    }
+    private void onSwipeCancelState(){}
 
     @SwipeIn
     private void onSwipeIn(){
-        Utils.createCacheFile(mContext, "config.json", mProfile.getTitle() + "~END~" + mProfile.getFirstImage() + "~END~", true);
-        Log.d("EVENT", "onSwipedIn");
+        //FileUtils.createCacheFile(mContext, "config.json", mProfile.getTitle() + "~END~" + mProfile.getFirstImage() + "~END~", true);
+        SavedListingArray savedListings = FileUtils.readSerializableListingArray(mContext, "saved_data.srl");
+        savedListings.addListing(mListing);
+        FileUtils.writeSerializableListingArray(mContext, savedListings, "saved_data.srl");
     }
 
     @SwipeInState
-    private void onSwipeInState(){
-        Log.d("EVENT", "onSwipeInState");
-    }
+    private void onSwipeInState(){}
 
     @SwipeOutState
-    private void onSwipeOutState(){
-        Log.d("EVENT", "onSwipeOutState");
-    }
+    private void onSwipeOutState(){}
 }

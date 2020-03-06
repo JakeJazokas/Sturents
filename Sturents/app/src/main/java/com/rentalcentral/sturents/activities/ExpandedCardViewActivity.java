@@ -26,6 +26,20 @@ public class ExpandedCardViewActivity extends AppCompatActivity {
         getSupportActionBar().setCustomView(R.layout.top_bar_layout_back);
         getSupportActionBar().setElevation(0);
 
+        //Populate all the data
+        populateViews();
+
+        //Go back to the main activity when the back button is pressed
+        ImageButton actionBarButton = findViewById(R.id.topBarButtonBack);
+        actionBarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+    }
+
+    private void populateViews(){
         //Grab the description and images that were passed to this activity
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
@@ -40,7 +54,7 @@ public class ExpandedCardViewActivity extends AppCompatActivity {
             expandedTitle.setText(title);
 
             SliderView sliderView = findViewById(R.id.expandedImageSlider);
-            SliderAdapter adapter = new SliderAdapter(this);
+            SliderAdapter adapter = new SliderAdapter();
 
             for(int i = 0; i < images.length; i++){
                 adapter.addItem(images[i]);
@@ -50,14 +64,5 @@ public class ExpandedCardViewActivity extends AppCompatActivity {
             sliderView.setIndicatorAnimation(IndicatorAnimations.WORM);
             sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
         }
-
-        //Go back to the main activity when the back button is pressed
-        ImageButton actionBarButton = findViewById(R.id.topBarButtonBack);
-        actionBarButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
     }
 }
