@@ -1,6 +1,7 @@
 package com.rentalcentral.sturents.adapters;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,12 +34,12 @@ public class RecyclerListingViewAdapter extends RecyclerView.Adapter<RecyclerLis
     @Override
     public void onBindViewHolder(ListingViewHolder holder, int position) {
         holder.myTextView.setText(getTitleAtPosition(position));
+        //Listing circle image
         Glide.with(holder.myImageView.getContext())
                 .load(getImageAtPosition(position))
                 .apply(RequestOptions.circleCropTransform())
                 .into(holder.myImageView);
         //Create the swipe button via glide
-//        btnContact
         Glide.with(holder.myContactButton.getContext())
                 .load(R.drawable.ic_heart)
                 .apply(RequestOptions.circleCropTransform())
@@ -69,6 +70,17 @@ public class RecyclerListingViewAdapter extends RecyclerView.Adapter<RecyclerLis
             myTextView = itemView.findViewById(R.id.userListingCardText);
             myImageView = itemView.findViewById(R.id.userListingCardImage);
             myContactButton = itemView.findViewById(R.id.btnContact);
+            //Click listener for the contact button
+            myContactButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position = getAdapterPosition();
+                    Listing mListing = savedListingArray.getListings().get(position);
+                    v.getContext().startActivity(new Intent(
+                            Intent.ACTION_VIEW,
+                            Uri.parse(mListing.getUrl())));
+                }
+            });
             //Set the onClick listener to use the onClick method below
             itemView.setOnClickListener(this);
         }
