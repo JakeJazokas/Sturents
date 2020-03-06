@@ -40,46 +40,46 @@
 24-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:15:9-40
 25        <activity
 25-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:17:9-23:20
-26            android:name="com.rentalcentral.sturents.MyListingsActivity"
-26-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:18:13-47
-27            android:parentActivityName="com.rentalcentral.sturents.MainActivity" >
-27-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:19:13-55
+26            android:name="com.rentalcentral.sturents.activities.MyListingsActivity"
+26-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:18:13-58
+27            android:parentActivityName="com.rentalcentral.sturents.activities.MainActivity" >
+27-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:19:13-66
 28            <meta-data
-28-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:20:13-22:48
+28-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:20:13-22:59
 29                android:name="android.support.PARENT_ACTIVITY"
 29-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:21:17-63
-30                android:value=".MainActivity" />
-30-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:22:17-46
+30                android:value=".activities.MainActivity" />
+30-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:22:17-57
 31        </activity>
 32        <activity
 32-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:25:9-31:20
-33            android:name="com.rentalcentral.sturents.MySettingsActivity"
-33-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:26:13-47
-34            android:parentActivityName="com.rentalcentral.sturents.MainActivity" >
-34-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:27:13-55
+33            android:name="com.rentalcentral.sturents.activities.MySettingsActivity"
+33-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:26:13-58
+34            android:parentActivityName="com.rentalcentral.sturents.activities.MainActivity" >
+34-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:27:13-66
 35            <meta-data
-35-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:20:13-22:48
+35-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:20:13-22:59
 36                android:name="android.support.PARENT_ACTIVITY"
 36-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:21:17-63
-37                android:value=".MainActivity" />
-37-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:22:17-46
+37                android:value=".activities.MainActivity" />
+37-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:22:17-57
 38        </activity>
 39        <activity
 39-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:33:9-39:20
-40            android:name="com.rentalcentral.sturents.ExpandedCardViewActivity"
-40-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:34:13-53
-41            android:parentActivityName="com.rentalcentral.sturents.MainActivity" >
-41-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:35:13-55
+40            android:name="com.rentalcentral.sturents.activities.ExpandedCardViewActivity"
+40-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:34:13-64
+41            android:parentActivityName="com.rentalcentral.sturents.activities.MainActivity" >
+41-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:35:13-66
 42            <meta-data
-42-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:20:13-22:48
+42-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:20:13-22:59
 43                android:name="android.support.PARENT_ACTIVITY"
 43-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:21:17-63
-44                android:value=".MainActivity" />
-44-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:22:17-46
+44                android:value=".activities.MainActivity" />
+44-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:22:17-57
 45        </activity>
-46        <activity android:name="com.rentalcentral.sturents.MainActivity" >
+46        <activity android:name="com.rentalcentral.sturents.activities.MainActivity" >
 46-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:41:9-47:20
-46-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:41:19-47
+46-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:41:19-58
 47            <intent-filter>
 47-->D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:42:13-46:29
 48                <action android:name="android.intent.action.MAIN" />

@@ -23,27 +23,27 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.rentalcentral.sturents.MyListingsActivity"
-            android:parentActivityName="com.rentalcentral.sturents.MainActivity" >
+            android:name="com.rentalcentral.sturents.activities.MyListingsActivity"
+            android:parentActivityName="com.rentalcentral.sturents.activities.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".activities.MainActivity" />
         </activity>
         <activity
-            android:name="com.rentalcentral.sturents.MySettingsActivity"
-            android:parentActivityName="com.rentalcentral.sturents.MainActivity" >
+            android:name="com.rentalcentral.sturents.activities.MySettingsActivity"
+            android:parentActivityName="com.rentalcentral.sturents.activities.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".activities.MainActivity" />
         </activity>
         <activity
-            android:name="com.rentalcentral.sturents.ExpandedCardViewActivity"
-            android:parentActivityName="com.rentalcentral.sturents.MainActivity" >
+            android:name="com.rentalcentral.sturents.activities.ExpandedCardViewActivity"
+            android:parentActivityName="com.rentalcentral.sturents.activities.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".activities.MainActivity" />
         </activity>
-        <activity android:name="com.rentalcentral.sturents.MainActivity" >
+        <activity android:name="com.rentalcentral.sturents.activities.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

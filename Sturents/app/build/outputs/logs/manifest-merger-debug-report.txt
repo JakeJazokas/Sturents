@@ -82,34 +82,34 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Ja
 		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:10:9-35
 	android:theme
 		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:15:9-40
-activity#com.rentalcentral.sturents.MyListingsActivity
+activity#com.rentalcentral.sturents.activities.MyListingsActivity
 ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:17:9-23:20
 	android:parentActivityName
-		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:19:13-55
+		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:19:13-66
 	android:name
-		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:18:13-47
+		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:18:13-58
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:20:13-22:48
+ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:20:13-22:59
 	android:value
-		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:22:17-46
+		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:22:17-57
 	android:name
 		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:21:17-63
-activity#com.rentalcentral.sturents.MySettingsActivity
+activity#com.rentalcentral.sturents.activities.MySettingsActivity
 ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:25:9-31:20
 	android:parentActivityName
-		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:27:13-55
+		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:27:13-66
 	android:name
-		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:26:13-47
-activity#com.rentalcentral.sturents.ExpandedCardViewActivity
+		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:26:13-58
+activity#com.rentalcentral.sturents.activities.ExpandedCardViewActivity
 ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:33:9-39:20
 	android:parentActivityName
-		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:35:13-55
+		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:35:13-66
 	android:name
-		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:34:13-53
-activity#com.rentalcentral.sturents.MainActivity
+		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:34:13-64
+activity#com.rentalcentral.sturents.activities.MainActivity
 ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:41:9-47:20
 	android:name
-		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:41:19-47
+		ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:41:19-58
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from D:\NewComputerDocuments\Sturents-Jake-Branch\Sturents\Sturents\app\src\main\AndroidManifest.xml:42:13-46:29
 action#android.intent.action.MAIN
