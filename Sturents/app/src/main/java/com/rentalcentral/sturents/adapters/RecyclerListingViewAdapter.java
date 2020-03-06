@@ -26,7 +26,7 @@ public class RecyclerListingViewAdapter extends RecyclerView.Adapter<RecyclerLis
 
     @Override
     public ListingViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View listItem = LayoutInflater.from(parent.getContext()).inflate(R.layout.sturents_user_listing_card, parent, false);
+        View listItem = LayoutInflater.from(parent.getContext()).inflate(R.layout.swipe_card_menu_layout, parent, false);
         return new ListingViewHolder(listItem);
     }
 
@@ -37,6 +37,12 @@ public class RecyclerListingViewAdapter extends RecyclerView.Adapter<RecyclerLis
                 .load(getImageAtPosition(position))
                 .apply(RequestOptions.circleCropTransform())
                 .into(holder.myImageView);
+        //Create the swipe button via glide
+//        btnContact
+        Glide.with(holder.myContactButton.getContext())
+                .load(R.drawable.ic_heart)
+                .apply(RequestOptions.circleCropTransform())
+                .into(holder.myContactButton);
     }
 
     @Override
@@ -56,11 +62,13 @@ public class RecyclerListingViewAdapter extends RecyclerView.Adapter<RecyclerLis
 
         private TextView myTextView;
         private ImageView myImageView;
+        private ImageView myContactButton;
 
         public ListingViewHolder(View itemView) {
             super(itemView);
             myTextView = itemView.findViewById(R.id.userListingCardText);
             myImageView = itemView.findViewById(R.id.userListingCardImage);
+            myContactButton = itemView.findViewById(R.id.btnContact);
             //Set the onClick listener to use the onClick method below
             itemView.setOnClickListener(this);
         }

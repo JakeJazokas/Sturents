@@ -108,6 +108,10 @@
         "source": "C:\\Users\\JakeJ\\StudioProjects\\Sturents\\Sturents\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\JakeJ\\StudioProjects\\Sturents\\Sturents\\app\\build\\intermediates\\res\\merged\\debug\\layout_swipe_card_menu_layout.xml.flat",
+        "source": "C:\\Users\\JakeJ\\StudioProjects\\Sturents\\Sturents\\app\\src\\main\\res\\layout\\swipe_card_menu_layout.xml"
+    },
+    {
         "merged": "C:\\Users\\JakeJ\\StudioProjects\\Sturents\\Sturents\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\JakeJ\\StudioProjects\\Sturents\\Sturents\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
@@ -166,5 +170,9 @@
     {
         "merged": "C:\\Users\\JakeJ\\StudioProjects\\Sturents\\Sturents\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\JakeJ\\StudioProjects\\Sturents\\Sturents\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\JakeJ\\StudioProjects\\Sturents\\Sturents\\app\\build\\intermediates\\res\\merged\\debug\\layout_swipe_card_right_menu_options.xml.flat",
+        "source": "C:\\Users\\JakeJ\\StudioProjects\\Sturents\\Sturents\\app\\src\\main\\res\\layout\\swipe_card_right_menu_options.xml"
     }
 ]

@@ -342,6 +342,9 @@ attr sliderIndicatorSelectedColor
 attr sliderIndicatorUnselectedColor
 attr sliderScrollTimeInSec
 attr sliderStartAutoCycle
+attr sml_auto_open_percent
+attr sml_scroller_duration
+attr sml_scroller_interpolator
 attr spanCount
 attr spinBars
 attr spinnerDropDownItemStyle
@@ -823,6 +826,7 @@ id barrier
 id beginning
 id blocking
 id bottom
+id btnContact
 id buttonPanel
 id center
 id center_horizontal
@@ -927,6 +931,11 @@ id showCustom
 id showHome
 id showTitle
 id slide
+id smContentView
+id smMenuViewBottom
+id smMenuViewLeft
+id smMenuViewRight
+id smMenuViewTop
 id spacer
 id split_action_bar
 id spread
@@ -939,6 +948,7 @@ id start
 id submenuarrow
 id submit_area
 id swap
+id swipeMenuLayout
 id swipeView
 id tabMode
 id tag_accessibility_actions
@@ -1039,6 +1049,8 @@ layout sturents_swipe_out_msg_view
 layout sturents_user_listing_card
 layout sturents_user_listings
 layout support_simple_spinner_dropdown_item
+layout swipe_card_menu_layout
+layout swipe_card_right_menu_options
 layout top_bar_layout
 layout top_bar_layout_back
 mipmap ic_launcher
@@ -1473,6 +1485,7 @@ styleable SliderView sliderAnimationDuration sliderAutoCycleDirection sliderAuto
 styleable Spinner android_entries android_popupBackground android_prompt android_dropDownWidth popupTheme
 styleable StateListDrawable android_dither android_visible android_variablePadding android_constantSize android_enterFadeDuration android_exitFadeDuration
 styleable StateListDrawableItem android_drawable
+styleable SwipeMenu sml_auto_open_percent sml_scroller_duration sml_scroller_interpolator
 styleable SwitchCompat android_textOn android_textOff android_thumb showText splitTrack switchMinWidth switchPadding switchTextAppearance thumbTextPadding thumbTint thumbTintMode track trackTint trackTintMode
 styleable TextAppearance android_textSize android_typeface android_textStyle android_textColor android_textColorHint android_textColorLink android_shadowColor android_shadowDx android_shadowDy android_shadowRadius android_fontFamily android_textFontWeight fontFamily fontVariationSettings textAllCaps textLocale
 styleable Toolbar android_gravity android_minHeight buttonGravity collapseContentDescription collapseIcon contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation logo logoDescription maxButtonHeight menu navigationContentDescription navigationIcon popupTheme subtitle subtitleTextAppearance subtitleTextColor title titleMargin titleMarginBottom titleMarginEnd titleMarginStart titleMarginTop titleMargins titleTextAppearance titleTextColor

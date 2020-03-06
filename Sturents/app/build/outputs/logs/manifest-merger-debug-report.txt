@@ -4,6 +4,7 @@ ADDED from C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidM
 INJECTED from C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:2:1-51:12
 INJECTED from C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:2:1-51:12
 INJECTED from C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:2:1-51:12
+MERGED from [com.tubb.smrv:swipemenu-recyclerview:5.4.8] C:\Users\JakeJ\.gradle\caches\transforms-2\files-2.1\e3e018ff67c7374df8f26c2a9cd34c10\jetified-swipemenu-recyclerview-5.4.8\AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\JakeJ\.gradle\caches\transforms-2\files-2.1\f7fa931c10060cb31b4ececcd856b65d\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\JakeJ\.gradle\caches\transforms-2\files-2.1\75fe1a0d0ea641341446dfd6b8974e96\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
 MERGED from [com.mindorks:placeholderview:0.7.1] C:\Users\JakeJ\.gradle\caches\transforms-2\files-2.1\ee6448f1ca117c04769cbe4e3b9e68d5\jetified-placeholderview-0.7.1\AndroidManifest.xml:2:1-12:12
@@ -60,6 +61,8 @@ ADDED from C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidM
 		ADDED from C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:7:22-77
 application
 ADDED from C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:9:5-49:19
+MERGED from [com.tubb.smrv:swipemenu-recyclerview:5.4.8] C:\Users\JakeJ\.gradle\caches\transforms-2\files-2.1\e3e018ff67c7374df8f26c2a9cd34c10\jetified-swipemenu-recyclerview-5.4.8\AndroidManifest.xml:11:5-20
+MERGED from [com.tubb.smrv:swipemenu-recyclerview:5.4.8] C:\Users\JakeJ\.gradle\caches\transforms-2\files-2.1\e3e018ff67c7374df8f26c2a9cd34c10\jetified-swipemenu-recyclerview-5.4.8\AndroidManifest.xml:11:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\JakeJ\.gradle\caches\transforms-2\files-2.1\75fe1a0d0ea641341446dfd6b8974e96\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\JakeJ\.gradle\caches\transforms-2\files-2.1\75fe1a0d0ea641341446dfd6b8974e96\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [com.github.smarteist:autoimageslider:1.3.5] C:\Users\JakeJ\.gradle\caches\transforms-2\files-2.1\f5b9208e841625c65c0897cd3f84a980\jetified-autoimageslider-1.3.5\AndroidManifest.xml:11:5-15:19
@@ -124,6 +127,8 @@ uses-sdk
 INJECTED from C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml
+MERGED from [com.tubb.smrv:swipemenu-recyclerview:5.4.8] C:\Users\JakeJ\.gradle\caches\transforms-2\files-2.1\e3e018ff67c7374df8f26c2a9cd34c10\jetified-swipemenu-recyclerview-5.4.8\AndroidManifest.xml:7:5-9:41
+MERGED from [com.tubb.smrv:swipemenu-recyclerview:5.4.8] C:\Users\JakeJ\.gradle\caches\transforms-2\files-2.1\e3e018ff67c7374df8f26c2a9cd34c10\jetified-swipemenu-recyclerview-5.4.8\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\JakeJ\.gradle\caches\transforms-2\files-2.1\f7fa931c10060cb31b4ececcd856b65d\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\JakeJ\.gradle\caches\transforms-2\files-2.1\f7fa931c10060cb31b4ececcd856b65d\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\JakeJ\.gradle\caches\transforms-2\files-2.1\75fe1a0d0ea641341446dfd6b8974e96\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
