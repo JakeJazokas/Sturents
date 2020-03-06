@@ -1,4 +1,4 @@
-package com.rentalcentral.sturents;
+package com.rentalcentral.sturents.activities;
 
 import android.os.Bundle;
 import android.view.View;
@@ -6,6 +6,8 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.rentalcentral.sturents.R;
 
 public class MySettingsActivity extends AppCompatActivity {
 

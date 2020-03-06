@@ -1,4 +1,4 @@
-package com.rentalcentral.sturents;
+package com.rentalcentral.sturents.activities;
 
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +8,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.rentalcentral.sturents.R;
+import com.rentalcentral.sturents.adapters.SliderAdapter;
 import com.smarteist.autoimageslider.IndicatorAnimations;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;

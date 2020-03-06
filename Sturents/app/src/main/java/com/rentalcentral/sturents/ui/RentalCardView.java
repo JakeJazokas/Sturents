@@ -1,4 +1,4 @@
-package com.rentalcentral.sturents;
+package com.rentalcentral.sturents.ui;
 
 import android.content.Context;
 import android.content.Intent;
@@ -17,6 +17,10 @@ import com.mindorks.placeholderview.annotations.swipe.SwipeIn;
 import com.mindorks.placeholderview.annotations.swipe.SwipeInState;
 import com.mindorks.placeholderview.annotations.swipe.SwipeOut;
 import com.mindorks.placeholderview.annotations.swipe.SwipeOutState;
+import com.rentalcentral.sturents.R;
+import com.rentalcentral.sturents.activities.ExpandedCardViewActivity;
+import com.rentalcentral.sturents.model.Profile;
+import com.rentalcentral.sturents.utils.Utils;
 
 @Layout(R.layout.sturents_card_view)
 public class RentalCardView {

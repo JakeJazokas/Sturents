@@ -1,4 +1,4 @@
-package com.rentalcentral.sturents;
+package com.rentalcentral.sturents.utils;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -10,6 +10,8 @@ import android.view.WindowManager;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.rentalcentral.sturents.model.Profile;
+import com.rentalcentral.sturents.R;
 
 import org.json.JSONArray;
 

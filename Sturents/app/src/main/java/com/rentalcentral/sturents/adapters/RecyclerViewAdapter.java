@@ -1,4 +1,4 @@
-package com.rentalcentral.sturents;
+package com.rentalcentral.sturents.adapters;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.rentalcentral.sturents.R;
 
 import java.util.ArrayList;
 

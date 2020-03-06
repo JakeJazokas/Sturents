@@ -1,4 +1,4 @@
-package com.rentalcentral.sturents;
+package com.rentalcentral.sturents.activities;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +9,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+
+import com.rentalcentral.sturents.R;
+import com.rentalcentral.sturents.adapters.RecyclerViewAdapter;
+import com.rentalcentral.sturents.utils.Utils;
 
 import java.io.File;
 import java.util.ArrayList;

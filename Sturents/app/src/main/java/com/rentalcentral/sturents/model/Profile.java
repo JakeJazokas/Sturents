@@ -1,4 +1,4 @@
-package com.rentalcentral.sturents;
+package com.rentalcentral.sturents.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

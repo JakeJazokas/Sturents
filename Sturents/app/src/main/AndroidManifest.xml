@@ -15,30 +15,30 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".MyListingsActivity"
-            android:parentActivityName=".MainActivity">
+            android:name=".activities.MyListingsActivity"
+            android:parentActivityName=".activities.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"/>
+                android:value=".activities.MainActivity"/>
         </activity>
 
         <activity
-            android:name=".MySettingsActivity"
-            android:parentActivityName=".MainActivity">
+            android:name=".activities.MySettingsActivity"
+            android:parentActivityName=".activities.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"/>
+                android:value=".activities.MainActivity"/>
         </activity>
 
         <activity
-            android:name=".ExpandedCardViewActivity"
-            android:parentActivityName=".MainActivity">
+            android:name=".activities.ExpandedCardViewActivity"
+            android:parentActivityName=".activities.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"/>
+                android:value=".activities.MainActivity"/>
         </activity>
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
