@@ -10,12 +10,9 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import com.rentalcentral.sturents.R;
-import com.rentalcentral.sturents.adapters.RecyclerViewAdapter;
-import com.rentalcentral.sturents.model.Listing;
+import com.rentalcentral.sturents.adapters.RecyclerListingViewAdapter;
 import com.rentalcentral.sturents.model.SavedListingArray;
 import com.rentalcentral.sturents.utils.FileUtils;
-
-import java.util.ArrayList;
 
 public class MyListingsActivity extends AppCompatActivity {
 
@@ -30,8 +27,8 @@ public class MyListingsActivity extends AppCompatActivity {
         getSupportActionBar().setElevation(0);
 
         //Get saved listings and populate view
-        ArrayList<ArrayList<String>> values = getSavedListingValues();
-        populateView(values.get(0), values.get(1));
+        SavedListingArray savedListings = FileUtils.readSerializableListingArray(getApplicationContext(), "saved_data.srl");
+        populateViewWithListings(savedListings);
 
         //Go back to the main activity when the back button is pressed
         ImageButton actionBarButton = findViewById(R.id.topBarButtonBack);
@@ -44,29 +41,14 @@ public class MyListingsActivity extends AppCompatActivity {
 
     }
 
-    private ArrayList<ArrayList<String>> getSavedListingValues(){
-        //Load cached file
-        SavedListingArray savedListings = FileUtils.readSerializableListingArray(getApplicationContext(), "saved_data.srl");
-        ArrayList<String> titleValues = new ArrayList<String>();
-        ArrayList<String> imageValues = new ArrayList<String>();
-        for(Listing l : savedListings.getListings()){
-            titleValues.add(l.getTitle());
-            imageValues.add(l.getFirstImage());
-        }
-        ArrayList<ArrayList<String>> outArray = new ArrayList<ArrayList<String>>();
-        outArray.add(titleValues);
-        outArray.add(imageValues);
-        return outArray;
-    }
-
     //Populate the view with saved listings
-    private void populateView(ArrayList<String> titleVals, ArrayList<String> imageVals){
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(titleVals, imageVals);
-        RecyclerView myView = findViewById(R.id.recyclerview);
-        myView.setHasFixedSize(true);
-        myView.setAdapter(adapter);
+    private void populateViewWithListings(SavedListingArray savedListings){
+        RecyclerListingViewAdapter adapter = new RecyclerListingViewAdapter(savedListings);
+        RecyclerView rView = findViewById(R.id.recyclerview);
+        rView.setHasFixedSize(true);
+        rView.setAdapter(adapter);
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
-        myView.setLayoutManager(llm);
+        rView.setLayoutManager(llm);
     }
 }
