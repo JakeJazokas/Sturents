@@ -16,10 +16,10 @@ Sturents is an application that will scape listings for student rentals from the
 - [ ] 1. Crawler  
   - [x] 1.1 Scapes listings from internet   
   - [x] 1.2 Parses information from each listing  
-  - [ ] 1.3 Sends parsed information to the database 
+  - [x] 1.3 Sends parsed information to the database 
  
-- [ ] 2. Database  
-  - [ ] 2.1 Stores the parsed data from each listing  
+- [x] 2. Database  
+  - [x] 2.1 Stores the parsed data from each listing  
   - [ ] 2.2 Sends the data to the application depending on the users parameters (range, price, etc...) 
  
 - [ ] 3. Application  
