@@ -884,6 +884,9 @@ id line1
 id line3
 id listMode
 id list_item
+id locationProgressBar
+id locationSeekBar
+id locationView
 id location_button
 id message
 id middle
@@ -901,6 +904,9 @@ id pager_indicator
 id parent
 id parentPanel
 id percent
+id priceProgressBar
+id priceSeekBar
+id priceView
 id profileImageView
 id progress_circular
 id progress_horizontal
