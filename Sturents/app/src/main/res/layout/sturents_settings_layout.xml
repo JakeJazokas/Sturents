@@ -18,19 +18,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
+
+            <Button
+                android:id="@+id/location_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="#ffffff"
-                android:gravity="center"
                 android:background="#e04f5f"
+                android:gravity="center"
                 android:paddingLeft="20dp"
-                android:paddingRight="20dp"
                 android:paddingTop="10dp"
+                android:paddingRight="20dp"
                 android:paddingBottom="10dp"
-                android:text="Location"/>
+                android:text="Location"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
 

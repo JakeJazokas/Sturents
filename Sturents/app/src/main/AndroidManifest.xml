@@ -46,6 +46,11 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".activities.Pop"
+            android:theme="@style/AppTheme.PopUpTheme"
+            ></activity>
+
+
     </application>
 
 </manifest>

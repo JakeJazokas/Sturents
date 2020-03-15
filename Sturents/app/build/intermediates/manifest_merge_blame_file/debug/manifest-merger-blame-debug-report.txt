@@ -6,91 +6,97 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="16"
-8-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml
+8-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="29" />
-9-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml
+9-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:5:5-67
-11-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:5:22-64
+11-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:5:5-67
+11-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:5:22-64
 12    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-12-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:6:5-81
-12-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:6:22-78
+12-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:6:5-81
+12-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:6:22-78
 13    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-13-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:7:5-80
-13-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:7:22-77
+13-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:7:5-80
+13-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:7:22-77
 14
 15    <application
-15-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:9:5-49:19
+15-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:9:5-54:19
 16        android:allowBackup="true"
-16-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:10:9-35
+16-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:10:9-35
 17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-17-->[androidx.core:core:1.1.0] C:\Users\JakeJ\.gradle\caches\transforms-2\files-2.1\1cd7eff88f5e86d0249af2958bf465f0\core-1.1.0\AndroidManifest.xml:24:18-86
+17-->[androidx.core:core:1.1.0] C:\Users\Jeff\.gradle\caches\transforms-2\files-2.1\1cd7eff88f5e86d0249af2958bf465f0\core-1.1.0\AndroidManifest.xml:24:18-86
 18        android:debuggable="true"
 19        android:icon="@mipmap/ic_launcher"
-19-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:11:9-43
+19-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:11:9-43
 20        android:label="@string/app_name"
-20-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:12:9-41
+20-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:12:9-41
 21        android:roundIcon="@mipmap/ic_launcher_round"
-21-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:13:9-54
+21-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:13:9-54
 22        android:supportsRtl="true"
-22-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:14:9-35
+22-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:14:9-35
 23        android:testOnly="true"
 24        android:theme="@style/AppTheme" >
-24-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:15:9-40
+24-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:15:9-40
 25        <activity
-25-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:17:9-23:20
+25-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:17:9-23:20
 26            android:name="com.rentalcentral.sturents.activities.MyListingsActivity"
-26-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:18:13-58
+26-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:18:13-58
 27            android:parentActivityName="com.rentalcentral.sturents.activities.MainActivity" >
-27-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:19:13-66
+27-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:19:13-66
 28            <meta-data
-28-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:20:13-22:59
+28-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:20:13-22:59
 29                android:name="android.support.PARENT_ACTIVITY"
-29-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:21:17-63
+29-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:21:17-63
 30                android:value=".activities.MainActivity" />
-30-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:22:17-57
+30-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:22:17-57
 31        </activity>
 32        <activity
-32-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:25:9-31:20
+32-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:25:9-31:20
 33            android:name="com.rentalcentral.sturents.activities.MySettingsActivity"
-33-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:26:13-58
+33-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:26:13-58
 34            android:parentActivityName="com.rentalcentral.sturents.activities.MainActivity" >
-34-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:27:13-66
+34-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:27:13-66
 35            <meta-data
-35-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:20:13-22:59
+35-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:20:13-22:59
 36                android:name="android.support.PARENT_ACTIVITY"
-36-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:21:17-63
+36-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:21:17-63
 37                android:value=".activities.MainActivity" />
-37-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:22:17-57
+37-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:22:17-57
 38        </activity>
 39        <activity
-39-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:33:9-39:20
+39-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:33:9-39:20
 40            android:name="com.rentalcentral.sturents.activities.ExpandedCardViewActivity"
-40-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:34:13-64
+40-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:34:13-64
 41            android:parentActivityName="com.rentalcentral.sturents.activities.MainActivity" >
-41-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:35:13-66
+41-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:35:13-66
 42            <meta-data
-42-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:20:13-22:59
+42-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:20:13-22:59
 43                android:name="android.support.PARENT_ACTIVITY"
-43-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:21:17-63
+43-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:21:17-63
 44                android:value=".activities.MainActivity" />
-44-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:22:17-57
+44-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:22:17-57
 45        </activity>
 46        <activity android:name="com.rentalcentral.sturents.activities.MainActivity" >
-46-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:41:9-47:20
-46-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:41:19-58
+46-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:41:9-47:20
+46-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:41:19-58
 47            <intent-filter>
-47-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:42:13-46:29
+47-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:42:13-46:29
 48                <action android:name="android.intent.action.MAIN" />
-48-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:43:17-69
-48-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:43:25-66
+48-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:43:17-69
+48-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:43:25-66
 49
 50                <category android:name="android.intent.category.LAUNCHER" />
-50-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:45:17-77
-50-->C:\Users\JakeJ\StudioProjects\Sturents\Sturents\app\src\main\AndroidManifest.xml:45:27-74
+50-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:45:17-77
+50-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:45:27-74
 51            </intent-filter>
 52        </activity>
-53    </application>
-54
-55</manifest>
+53        <activity
+53-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:49:9-51:25
+54            android:name="com.rentalcentral.sturents.activities.Pop"
+54-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:49:19-49
+55            android:theme="@style/AppTheme.PopUpTheme" />
+55-->D:\Sturents2\Sturents\Sturents\app\src\main\AndroidManifest.xml:50:13-55
+56    </application>
+57
+58</manifest>
