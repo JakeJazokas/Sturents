@@ -31,29 +31,38 @@ function replaceAll(str, find, replace){
 kijiji.search(params, options).then(function(ads) {
     //Array of all listings
     let listings = [];
+	
     //Loop through the ads array
     for (let i = 0; i < ads.length; ++i) {
 	let url = "\'" + ads[i].url + "\'";
 	let badTitle = ads[i].title;
 	let badDescription = ads[i].description;
-
+	
+	
 	let goodTitle = replaceAll(badTitle, "\'", " ")
 	let goodDescription = replaceAll(badDescription, "\'", " ")
 	
 
 	let gooderTitle = "\'" + goodTitle + "\'"
 	let gooderDescription = "\'" + goodDescription + "\'"
-	
-	    let queryString =`INSERT INTO listings (url, title, description, images) 
+
+	let lat = ads[i].attributes.location.latitude;
+	let lon = ads[i].attributes.location.longitude;
+	let addr = ads[i].attributes.location.mapAddress;
+	addr = replaceAll(addr, "\'", " ");
+	addr = "\'" + addr + "\'"
+
+	    let queryString =`INSERT INTO listings (url, title, description, latitude, longitude, address, images) 
 				VALUES
-				(${url}, ${gooderTitle}, ${gooderDescription}, \'{${ads[i].images}}\')`;
+				(${url}, ${gooderTitle}, ${gooderDescription}, ${lat}, ${lon}, ${addr}, \'{${ads[i].images}}\')`;
 
 	pool.query(queryString, (err, res)=>{
 			if(err && err.code != 23505){
 				console.log("---------------------------------------------------------------------------------------------------------");
-				console.log(gooderTitle);
+				//console.log(gooderTitle);
 				console.log(ads[i].url);
-				console.log(gooderDescription);
+				//console.log(gooderDescription);
+				console.log(addr);
 				console.log(err);
 				console.log("---------------------------------------------------------------------------------------------------------");
 				}
