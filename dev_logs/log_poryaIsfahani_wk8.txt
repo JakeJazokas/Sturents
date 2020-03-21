@@ -1,0 +1,9 @@
+	-Scraper now pushes into rds
+		-Took a lot of research to realize my initial plan of pushing a JSON file was not feasible
+		-The scraper now actively inserts listings as it reaches them to RDS
+	-Created API using nodejs Express framework
+		-Took a lot of reasearch to realize my initial plan of querying the db directly from the app was not feasible
+		-Launched an express server to host an API for the app to parse data from
+		-Had to redo security rules for AWS VPC
+	
+	-Total time: 8h
