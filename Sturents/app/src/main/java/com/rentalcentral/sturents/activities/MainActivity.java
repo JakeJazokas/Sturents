@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 import com.mindorks.placeholderview.SwipeDecor;
 import com.mindorks.placeholderview.SwipePlaceHolderView;
@@ -60,7 +61,14 @@ public class MainActivity extends AppCompatActivity {
                         .setSwipeInMsgLayoutId(R.layout.sturents_swipe_in_msg_view)
                         .setSwipeOutMsgLayoutId(R.layout.sturents_swipe_out_msg_view));
 
-        List<Listing> listingList = JsonUtils.loadProfiles(this.getApplicationContext());
+        List<Listing> listingList = null;
+        try {
+            listingList = JsonUtils.loadProfiles(this.getApplicationContext());
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         for(Listing listing : listingList){
             mSwipeView.addView(new RentalCardView(mContext, listing, mSwipeView));
