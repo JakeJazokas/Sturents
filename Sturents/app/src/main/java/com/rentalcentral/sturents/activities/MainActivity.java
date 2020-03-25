@@ -11,6 +11,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageButton;
 
+import java.io.File;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
@@ -42,11 +43,14 @@ public class MainActivity extends AppCompatActivity {
         mSwipeView = findViewById(R.id.swipeView);
         mContext = getApplicationContext();
 
-        //TODO Check if the local storage file is present
-        //TODO if it is present then remove saved listings that are already present
-        FileUtils.createCacheFile(mContext, "saved_data.srl", "", false);
-        //Write blank array
-        FileUtils.writeSerializableListingArray(mContext, new SavedListingArray(), "saved_data.srl");
+        //Check if the cache file exists, if it does not then create a new blank ones.
+        File cacheFile = new File(getApplicationContext().getFilesDir(), "saved_data.srl");
+        if(!cacheFile.exists()){
+            //Create cache file
+            FileUtils.createCacheFile(mContext, "saved_data.srl", "", false);
+            //Write blank array to cache file
+            FileUtils.writeSerializableListingArray(mContext, new SavedListingArray(), "saved_data.srl");
+        }
 
         int bottomMargin = DisplayUtils.dpToPx(120);
         Point windowSize = DisplayUtils.getDisplaySize(getWindowManager());
