@@ -23,6 +23,7 @@ anim btn_radio_to_off_mtrl_ring_outer_path_animation
 anim btn_radio_to_on_mtrl_dot_group_animation
 anim btn_radio_to_on_mtrl_ring_outer_animation
 anim btn_radio_to_on_mtrl_ring_outer_path_animation
+array cities_array
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -835,6 +836,7 @@ id chains
 id checkbox
 id checked
 id chronometer
+id citySpinner
 id clip_horizontal
 id clip_vertical
 id collapseActionView
@@ -925,6 +927,8 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
+id seekBarLocationRange
+id seekBarPriceRange
 id select_dialog_listview
 id shortcut
 id showCustom
@@ -963,6 +967,8 @@ id text
 id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
+id textViewLocationRange
+id textViewPriceRange
 id thinWorm
 id time
 id title
@@ -1031,6 +1037,7 @@ layout abc_tooltip
 layout activity_main
 layout custom_dialog
 layout image_slider_layout
+layout location_spinner_item
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big
@@ -1056,7 +1063,6 @@ layout top_bar_layout_back
 mipmap ic_launcher
 mipmap ic_launcher_round
 raw listings
-raw nodelistings
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
