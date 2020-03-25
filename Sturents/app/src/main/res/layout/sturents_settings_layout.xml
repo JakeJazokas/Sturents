@@ -64,6 +64,39 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <SeekBar
+                    android:id="@+id/seekBarLocationRange"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:thumbTint="#e04f5f"/>
+
+                <TextView
+                    android:id="@+id/textViewLocationRange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@+id/seekBarLocationRange"
+                    android:textColor="#000000"
+                    android:textSize="20sp"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            app:cardElevation="8dp"
+            app:cardCornerRadius="6dp"
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -77,6 +110,39 @@
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:text="Price Range"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            app:cardElevation="8dp"
+            app:cardCornerRadius="6dp"
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <SeekBar
+                    android:id="@+id/seekBarPriceRange"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:thumbTint="#e04f5f"/>
+
+                <TextView
+                    android:id="@+id/textViewPriceRange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@+id/seekBarPriceRange"
+                    android:textColor="#000000"
+                    android:textSize="20sp"/>
+
+            </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
 
