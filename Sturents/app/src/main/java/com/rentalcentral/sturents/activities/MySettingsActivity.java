@@ -3,8 +3,10 @@ package com.rentalcentral.sturents.activities;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBar;
@@ -18,6 +20,7 @@ public class MySettingsActivity extends AppCompatActivity {
 
     TextView locationRangeText, priceRangeText;
     SeekBar locationRangeSeek, priceRangeSeek;
+    Spinner citySpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) { {
@@ -34,11 +37,13 @@ public class MySettingsActivity extends AppCompatActivity {
         locationRangeText = findViewById(R.id.textViewLocationRange);
         priceRangeSeek = findViewById(R.id.seekBarPriceRange);
         priceRangeText = findViewById(R.id.textViewPriceRange);
+        citySpinner = findViewById(R.id.citySpinner);
 
         //Load the shared prefs file in order to get saved values
         SharedPreferences prefs = getDefaultSharedPreferences(getApplicationContext());
 
         //Call the methods to initialize listeners
+        placeSelectionDropdown();
         locationRangeSeekBar(prefs);
         priceRangeSeekBar(prefs);
 
@@ -51,6 +56,13 @@ public class MySettingsActivity extends AppCompatActivity {
             }
         });
     }}
+
+    private void placeSelectionDropdown(){
+        //Create the adapter and use the android default layouts for the spinner drop down
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.cities_array, R.layout.location_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        citySpinner.setAdapter(adapter);
+    }
 
     private void locationRangeSeekBar(final SharedPreferences preferences){
         //Set the max value
