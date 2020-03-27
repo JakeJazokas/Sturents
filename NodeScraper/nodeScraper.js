@@ -1,89 +1,120 @@
 const kijiji = require("kijiji-scraper");
 const fs = require('fs');
-const { Pool, Client } = require("pg");
+const {
+        Pool,
+        Client
+} = require("pg");
 
 const pool = new Pool({
-	user	: "postgres",
-	host 	: "rentalcentral.c7gdjiu5zeuo.us-east-1.rds.amazonaws.com",
-	database: "nodescraper",
-	password: "student123",
-	port	: "5432"
+        user: "postgres",
+        host: "rentalcentral.c7gdjiu5zeuo.us-east-1.rds.amazonaws.com",
+        database: "nodescraper",
+        password: "student123",
+        port: "5432"
 });
 
 let options = {
-    minResults: 400 //Minimum number of results (20 per page, so 40 = 2 pages)
+        minResults: 400 //Minimum number of results (20 per page, so 40 = 2 pages)
 };
 
 let params = {
-    locationId: 1700185,    //Location for ottawa area.
-    categoryId: 30349001,   //Category for rentals
-    keywords: "Student",    //Search student rentals
-    adType: "OFFER"         //Show only people offering rentals
+        locationId: 1700185, //Location for ottawa area.
+        categoryId: 30349001, //Category for rentals
+        keywords: "Student", //Search student rentals
+        adType: "OFFER" //Show only people offering rentals
 };
 
-function replaceAll(str, find, replace){
-	return str.replace(new RegExp(find, 'g'), replace);
+let locations = "ottawa";
+
+function replaceAll(str, find, replace) {
+        return str.replace(new RegExp(find, 'g'), replace);
 }
 
+function innerFunction(locations, ads){
+	//Array of all listings
+	let listings = [];
+	console.log("Done " + locations);
 
+	//Loop through the ads array
+	for (let i = 0; i < ads.length; ++i) {
 
-//Scrape using the options and parameters objects, then send the ads that were scraped to be parseds
-kijiji.search(params, options).then(function(ads) {
-    //Array of all listings
-    let listings = [];
-	
-    //Loop through the ads array
-    for (let i = 0; i < ads.length; ++i) {
-	let url = "\'" + ads[i].url + "\'";
-	let badTitle = ads[i].title;
-	let badDescription = ads[i].description;
-	
-	
-	let goodTitle = replaceAll(badTitle, "\'", " ")
-	let goodDescription = replaceAll(badDescription, "\'", " ")
-	
+			let url = "\'" + ads[i].url + "\'";
+			let title = ads[i].title;
+			let description = ads[i].description;
+			let addr = ads[i].attributes.location.mapAddress;
+			let lat = ads[i].attributes.location.latitude;
+			let lon = ads[i].attributes.location.longitude;
+			let price = ads[i].attributes.price;
 
-	let gooderTitle = "\'" + goodTitle + "\'"
-	let gooderDescription = "\'" + goodDescription + "\'"
+			title = replaceAll(title, "\'", " ");
+			description = replaceAll(description, "\'", " ");
+			addr = replaceAll(addr, "\'", " ");
 
-	let lat = ads[i].attributes.location.latitude;
-	let lon = ads[i].attributes.location.longitude;
-	let addr = ads[i].attributes.location.mapAddress;
-	addr = replaceAll(addr, "\'", " ");
-	addr = "\'" + addr + "\'"
+			title = "\'" + title + "\'"
+			description = "\'" + description + "\'"
+			addr = "\'" + addr + "\'"
 
-	    let queryString =`INSERT INTO listings (url, title, description, latitude, longitude, address, images) 
-				VALUES
-				(${url}, ${gooderTitle}, ${gooderDescription}, ${lat}, ${lon}, ${addr}, \'{${ads[i].images}}\')`;
+			let queryString = `INSERT INTO ${locations} (url, title, description, latitude, longitude, address, price, images)
+							VALUES
+							(${url}, ${title}, ${description}, ${lat}, ${lon}, ${addr}, ${price}, \'{${ads[i].images}}\')`;
 
-	pool.query(queryString, (err, res)=>{
-			if(err && err.code != 23505){
-				console.log("---------------------------------------------------------------------------------------------------------");
-				//console.log(gooderTitle);
-				console.log(ads[i].url);
-				//console.log(gooderDescription);
-				console.log(addr);
-				console.log(err);
-				console.log("---------------------------------------------------------------------------------------------------------");
-				}
+			pool.query(queryString, (err, res) => {
+					if (err && err.code != 23505) {
+							console.log("---------------------------------------------------------------------------------------------------------");
+							console.log(err);
+							console.log("---------------------------------------------------------------------------------------------------------");
+					}
 			});
-	    
-	//Listing data structure used for each json object
-        let listing = { 
-            title: ads[i].title,
-            description: ads[i].description, 
-            images: ads[i].images,
-            date: ads[i].date,
-            attributes: ads[i].attributes,
-            url: ads[i].url 
-        };
-        //Push the listing data to the array of all listings
-        listings.push(listing);
-    }
-    //Parse structre to json and write to a file
-    let listingsData = JSON.stringify(listings);
-    fs.writeFileSync('kijiji-listings.json', listingsData);
-}).catch(console.error);
+			//Listing data structure used for each json object
+			let listing = {
+					title: ads[i].title,
+					description: ads[i].description,
+					images: ads[i].images,
+					date: ads[i].date,
+					attributes: ads[i].attributes,
+					url: ads[i].url
+			};
+			//Push the listing data to the array of all listings
+			listings.push(listing);
+	}
+	//Parse structre to json and write to a file
+	let listingsData = JSON.stringify(listings);
+	fs.writeFileSync('kijiji-listings.json', listingsData);	
+}
 
-//Search for ads
-kijiji.search(params, options);
+//Third Call
+function callbackFunctionTwo() {
+     
+		params = {
+			locationId: 1700273,
+			categoryId: 30349001,
+			keywords: "Student",
+			adType: "OFFER"
+		};
+		locations = 'toronto';
+        kijiji.search(params, options).then(function(ads){
+			innerFunction(locations, ads);
+		}).catch(console.error);
+    
+}
+
+//Second call
+function callbackFunctionOne() {
+	params = {
+			locationId: 1700281,
+			categoryId: 30349001,
+			keywords: "étudiant",
+			adType: "OFFER"
+	};
+	locations = 'montreal';
+	kijiji.search(params, options).then(function(ads){
+		innerFunction(locations, ads);
+		callbackFunctionTwo();
+	}).catch(console.error);
+}
+
+//First call
+kijiji.search(params, options).then(function(ads){
+	innerFunction(locations, ads);
+	callbackFunctionOne();
+}).catch(console.error);

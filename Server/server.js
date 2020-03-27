@@ -13,7 +13,9 @@ const pool = new Pool({
 	port	: "5432"
 });
 
-let queryString = `SELECT * FROM listings`
+let ottawa =	`SELECT * FROM ottawa`
+let toronto = 	`SELECT * FROM toronto`
+let montreal = 	`SELECT * FROM montreal`
 
 app.use(bodyParser.json())
 
@@ -28,10 +30,8 @@ app.get('/', (req, res) =>{
 	
 });
 
-
-
-const getListings = (req, response) => {
-	pool.query(queryString, (err, results) => {
+const getOttawa = (req, response) => {
+	pool.query(ottawa, (err, results) => {
 		if (err){
 			throw err
 		}
@@ -40,7 +40,31 @@ const getListings = (req, response) => {
 	})
 }
 
-app.get('/listings', getListings)
+const getMontreal = (req, response) => {
+        pool.query(montreal, (err, results) => {
+                if (err){
+                        throw err
+                }
+
+                response.status(200).json(results.rows)
+        })
+}
+
+const getToronto = (req, response) => {
+        pool.query(toronto, (err, results) => {
+                if (err){
+                        throw err
+                }
+
+                response.status(200).json(results.rows)
+        })
+}
+
+
+app.get('/ottawa', getOttawa)
+app.get('/toronto', getToronto)
+app.get('/montreal', getMontreal)
+
 
 app.listen(port, () => {
 	console.log(`App running on port ${port}.`)
