@@ -16,6 +16,8 @@ import com.rentalcentral.sturents.R;
 import com.rentalcentral.sturents.activities.ExpandedCardViewActivity;
 import com.rentalcentral.sturents.model.Listing;
 import com.rentalcentral.sturents.model.SavedListingArray;
+import com.rentalcentral.sturents.utils.FileUtils;
+import com.tubb.smrv.SwipeHorizontalMenuLayout;
 
 public class RecyclerListingViewAdapter extends RecyclerView.Adapter<RecyclerListingViewAdapter.ListingViewHolder> {
 
@@ -32,7 +34,7 @@ public class RecyclerListingViewAdapter extends RecyclerView.Adapter<RecyclerLis
     }
 
     @Override
-    public void onBindViewHolder(ListingViewHolder holder, int position) {
+    public void onBindViewHolder(final ListingViewHolder holder, final int position) {
         holder.myTextView.setText(getTitleAtPosition(position));
         //Listing circle image
         Glide.with(holder.myImageView.getContext())
@@ -41,9 +43,24 @@ public class RecyclerListingViewAdapter extends RecyclerView.Adapter<RecyclerLis
                 .into(holder.myImageView);
         //Create the swipe button via glide
         Glide.with(holder.myContactButton.getContext())
-                .load(R.drawable.ic_heart)
+                .load(R.drawable.ic_message_3)
                 .apply(RequestOptions.circleCropTransform())
                 .into(holder.myContactButton);
+
+        Glide.with(holder.myContactButton2.getContext())
+                .load(R.drawable.ic_cancel)
+                .apply(RequestOptions.circleCropTransform())
+                .into(holder.myContactButton2);
+
+        holder.myContactButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                savedListingArray.removeListing(savedListingArray.getListings().get(position));
+                notifyDataSetChanged();
+                holder.swipeHorizontalMenuLayout.smoothCloseMenu(250);
+                FileUtils.writeSerializableListingArray(holder.itemView.getContext(), savedListingArray, "saved_data.srl");
+            }
+        });
     }
 
     @Override
@@ -64,12 +81,16 @@ public class RecyclerListingViewAdapter extends RecyclerView.Adapter<RecyclerLis
         private TextView myTextView;
         private ImageView myImageView;
         private ImageView myContactButton;
+        private ImageView myContactButton2;
+        private SwipeHorizontalMenuLayout swipeHorizontalMenuLayout;
 
         public ListingViewHolder(View itemView) {
             super(itemView);
             myTextView = itemView.findViewById(R.id.userListingCardText);
             myImageView = itemView.findViewById(R.id.userListingCardImage);
             myContactButton = itemView.findViewById(R.id.btnContact);
+            myContactButton2 = itemView.findViewById(R.id.btnContact2);
+            swipeHorizontalMenuLayout = itemView.findViewById(R.id.swipeMenuLayout);
             //Click listener for the contact button
             myContactButton.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -79,6 +100,7 @@ public class RecyclerListingViewAdapter extends RecyclerView.Adapter<RecyclerLis
                     v.getContext().startActivity(new Intent(
                             Intent.ACTION_VIEW,
                             Uri.parse(mListing.getUrl())));
+                    swipeHorizontalMenuLayout.smoothCloseMenu(250);
                 }
             });
             //Set the onClick listener to use the onClick method below

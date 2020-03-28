@@ -742,6 +742,7 @@ drawable ic_hamburger
 drawable ic_heart
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_message_3
 drawable ic_my_listings
 drawable ic_profile
 drawable ic_settings
@@ -832,6 +833,7 @@ id beginning
 id blocking
 id bottom
 id btnContact
+id btnContact2
 id buttonPanel
 id center
 id center_horizontal
