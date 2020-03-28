@@ -53,7 +53,7 @@ public class MySettingsActivity extends AppCompatActivity {
         placeSelectionDropdown();
         locationRangeSeekBar(prefs);
         priceRangeSeekBar(prefs);
-        darkMode();
+        darkMode(prefs);
 
         //Go back to the main activity when the back button is pressed
         ImageButton actionBarButton = findViewById(R.id.topBarButtonBack);
@@ -166,7 +166,30 @@ public class MySettingsActivity extends AppCompatActivity {
         });
     }
 
-    public void darkMode() {
+    public void darkMode(final SharedPreferences preferences) {
+        //Read preferences from local storage
+        String key = "dark_mode_prefs";
+        String default_string = "";
+        final String return_value = preferences.getString(key, default_string);
+        if(return_value.equals("") || return_value.equals("Light Mode")) {
+            modeSpinner.post(new Runnable() {
+                @Override
+                public void run() {
+                    modeSpinner.setPrompt("Light Mode");
+                    modeSpinner.setSelection(0);
+                }
+            });
+        }
+        else{
+            modeSpinner.post(new Runnable() {
+                @Override
+                public void run() {
+                    modeSpinner.setPrompt(return_value);
+                    modeSpinner.setSelection(1);
+                }
+            });
+        }
+
         //Create the adapter and use the android default layouts for the spinner drop down
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.mode_array, R.layout.location_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -178,13 +201,11 @@ public class MySettingsActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) {
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-                    //startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                    setState("Toggle", true, getApplicationContext());
+                    preferences.edit().putString("dark_mode_prefs", "Light Mode").apply();
                 }
                 else {
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-                    //startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                    setState("Toggle", false, getApplicationContext());
+                    preferences.edit().putString("dark_mode_prefs", "Dark Mode").apply();
                 }
             }
 
@@ -194,21 +215,6 @@ public class MySettingsActivity extends AppCompatActivity {
             }
         });
 
-    }
-
-    public static void setState(String key, Boolean value, Context context)
-    {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        SharedPreferences.Editor editor = prefs.edit();
-        editor.putBoolean(key, value);
-        editor.apply();
-    }
-
-    // Funciton to retrieve the switch state
-    public static Boolean getState(String key, Context context)
-    {
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-        return preferences.getBoolean(key, false);
     }
 }
 

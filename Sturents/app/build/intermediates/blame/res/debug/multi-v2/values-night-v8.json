@@ -6,9 +6,11 @@
                 {
                     "source": "C:\\Users\\Jake\\.gradle\\caches\\transforms-2\\files-2.1\\f7fa931c10060cb31b4ececcd856b65d\\appcompat-1.1.0\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
-                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1",
-                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1",
-                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1"
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,125,209,293,389,491,593,687",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "120,204,288,384,486,588,682,771"
                     },
                     "to": {
                         "startLines": "8,9,10,11,12,13,14,15",
@@ -21,11 +23,11 @@
                 {
                     "source": "D:\\NewComputerDocuments\\Sturents-Jake-Branch\\Sturents\\Sturents\\app\\src\\main\\res\\values-night\\colors.xml",
                     "from": {
-                        "startLines": "-1,6,-1,-1,-1,-1",
-                        "startColumns": "-1,4,-1,-1,-1,-1",
-                        "startOffsets": "-1,206,-1,-1,-1,-1",
-                        "endColumns": "-1,49,-1,-1,-1,-1",
-                        "endOffsets": "-1,251,-1,-1,-1,-1"
+                        "startLines": "4,6,2,3,7,8",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "157,206,57,105,257,303",
+                        "endColumns": "45,49,46,50,44,44",
+                        "endOffsets": "198,251,99,151,297,343"
                     },
                     "to": {
                         "startLines": "2,3,4,5,6,7",

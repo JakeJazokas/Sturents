@@ -2,9 +2,11 @@ package com.rentalcentral.sturents.activities;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -24,6 +26,8 @@ import com.rentalcentral.sturents.ui.RentalCardView;
 import com.rentalcentral.sturents.utils.DisplayUtils;
 import com.rentalcentral.sturents.utils.FileUtils;
 import com.rentalcentral.sturents.utils.JsonUtils;
+
+import static android.preference.PreferenceManager.getDefaultSharedPreferences;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -51,6 +55,21 @@ public class MainActivity extends AppCompatActivity {
             //Write blank array to cache file
             FileUtils.writeSerializableListingArray(mContext, new SavedListingArray(), "saved_data.srl");
         }
+
+        //Load the shared prefs file in order to get saved values
+        SharedPreferences prefs = getDefaultSharedPreferences(getApplicationContext());
+
+        // Check dark mode state from preferences
+        String key = "dark_mode_prefs";
+        String default_string = "";
+        String return_value = prefs.getString(key, default_string);
+        if(return_value.equals("") || return_value.equals("Light Mode")) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }
+        else{
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }
+
 
         int bottomMargin = DisplayUtils.dpToPx(120);
         Point windowSize = DisplayUtils.getDisplaySize(getWindowManager());
