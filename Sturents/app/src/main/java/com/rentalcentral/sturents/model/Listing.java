@@ -23,6 +23,18 @@ public class Listing implements Serializable {
     @Expose
     private String url;
 
+    @SerializedName("price")
+    @Expose
+    private int price;
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
     public String getTitle() {
         return title;
     }
