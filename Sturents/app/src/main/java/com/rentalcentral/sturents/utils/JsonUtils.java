@@ -1,20 +1,16 @@
 package com.rentalcentral.sturents.utils;
 
 import android.content.Context;
-import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.rentalcentral.sturents.R;
 import com.rentalcentral.sturents.model.Listing;
 
 import org.json.JSONArray;
 
-import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,15 +18,12 @@ import java.util.concurrent.ExecutionException;
 
 public class JsonUtils {
 
-
     //Parse all the data from the json files into a 'Profile' containing a specific listing
-    public static List<Listing> loadProfiles(Context context) throws ExecutionException, InterruptedException {
-
-        //Log.d("something","its shit " + data);
+    public static List<Listing> loadProfiles(Context context, String url) throws ExecutionException, InterruptedException {
         try{
             GsonBuilder builder = new GsonBuilder();
             Gson gson = builder.create();
-            JSONArray array = new JSONArray(loadJSONFromResources(context));
+            JSONArray array = new JSONArray(loadJSONFromResources(context, url));
             List<Listing> listingList = new ArrayList<>();
             for(int i=0;i<array.length();i++){
                 Listing listing = gson.fromJson(array.getString(i), Listing.class);
@@ -44,13 +37,11 @@ public class JsonUtils {
     }
 
     //Loads the JSON file from the resources folder
-    //The json file is named listings.json
-    private static String loadJSONFromResources(Context context) throws ExecutionException, InterruptedException {
+    private static String loadJSONFromResources(Context context, String url) throws ExecutionException, InterruptedException {
         String json = null;
         String data;
-        data = new DataUtils(context).execute("http://ec2-18-212-6-101.compute-1.amazonaws.com:3000/listings").get();
+        data = new DataUtils(context, url).execute(url).get();
         InputStream inputStream = new ByteArrayInputStream(data.getBytes(Charset.forName("UTF-8")));
-
         try {
             InputStream is = inputStream;
             int size = is.available();

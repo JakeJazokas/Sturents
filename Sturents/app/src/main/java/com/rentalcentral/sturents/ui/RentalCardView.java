@@ -75,7 +75,6 @@ public class RentalCardView {
 
     @SwipeIn
     private void onSwipeIn(){
-        //FileUtils.createCacheFile(mContext, "config.json", mProfile.getTitle() + "~END~" + mProfile.getFirstImage() + "~END~", true);
         SavedListingArray savedListings = FileUtils.readSerializableListingArray(mContext, "saved_data.srl");
         savedListings.addListing(mListing);
         FileUtils.writeSerializableListingArray(mContext, savedListings, "saved_data.srl");

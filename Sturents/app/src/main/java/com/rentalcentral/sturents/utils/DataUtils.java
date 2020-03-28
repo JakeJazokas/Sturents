@@ -23,9 +23,11 @@ import com.google.gson.Gson;
 public class DataUtils extends AsyncTask<String, Void, String> {
 
     private Context context;
+    private String currentURL;
 
-    public DataUtils(Context context){
+    public DataUtils(Context context, String url){
         this.context = context;
+        this.currentURL = url;
     }
 
     private Exception exception;
@@ -33,11 +35,9 @@ public class DataUtils extends AsyncTask<String, Void, String> {
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     protected String doInBackground(String... urls){
         String data = "";
-
         Gson gson = new Gson();
         try {
-
-            URL url = new URL("http://ec2-18-212-6-101.compute-1.amazonaws.com:3000/listings");
+            URL url = new URL(currentURL);
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
 
             BufferedReader br = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
@@ -45,24 +45,17 @@ public class DataUtils extends AsyncTask<String, Void, String> {
             while ((line = br.readLine()) != null) {
                 data += line;
             }
-
             urlConnection.disconnect();
-
         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
-        //FileUtils.writeSerializableJSON(context, data, "nodelistings.json");
         try (FileWriter file = new FileWriter("nodelistings.json")) {
-
             file.write(data);
             file.flush();
-
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         return data;
     }
     protected void onPostExecute(String data) {

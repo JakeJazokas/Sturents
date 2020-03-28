@@ -87,7 +87,6 @@ public class RecyclerListingViewAdapter extends RecyclerView.Adapter<RecyclerLis
 
         @Override
         public void onClick(View v) {
-            //TODO add buttons to the card to open the (mail/weblink) or view the full details of the listing
             //Get the current position and the listing at the position
             int position = getAdapterPosition();
             Listing mListing = savedListingArray.getListings().get(position);
