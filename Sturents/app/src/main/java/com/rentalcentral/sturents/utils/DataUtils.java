@@ -50,12 +50,6 @@ public class DataUtils extends AsyncTask<String, Void, String> {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        try (FileWriter file = new FileWriter("nodelistings.json")) {
-            file.write(data);
-            file.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         return data;
     }
     protected void onPostExecute(String data) {

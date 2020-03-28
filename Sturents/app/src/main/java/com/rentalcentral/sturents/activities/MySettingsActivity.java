@@ -1,9 +1,14 @@
 package com.rentalcentral.sturents.activities;
 
+import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.Spinner;
@@ -11,6 +16,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import com.rentalcentral.sturents.R;
 
@@ -20,7 +26,7 @@ public class MySettingsActivity extends AppCompatActivity {
 
     TextView locationRangeText, priceRangeText;
     SeekBar locationRangeSeek, priceRangeSeek;
-    Spinner citySpinner;
+    Spinner citySpinner, modeSpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) { {
@@ -38,6 +44,7 @@ public class MySettingsActivity extends AppCompatActivity {
         priceRangeSeek = findViewById(R.id.seekBarPriceRange);
         priceRangeText = findViewById(R.id.textViewPriceRange);
         citySpinner = findViewById(R.id.citySpinner);
+        modeSpinner = findViewById(R.id.modeSpinner);
 
         //Load the shared prefs file in order to get saved values
         SharedPreferences prefs = getDefaultSharedPreferences(getApplicationContext());
@@ -46,6 +53,7 @@ public class MySettingsActivity extends AppCompatActivity {
         placeSelectionDropdown();
         locationRangeSeekBar(prefs);
         priceRangeSeekBar(prefs);
+        darkMode();
 
         //Go back to the main activity when the back button is pressed
         ImageButton actionBarButton = findViewById(R.id.topBarButtonBack);
@@ -62,6 +70,17 @@ public class MySettingsActivity extends AppCompatActivity {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.cities_array, R.layout.location_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         citySpinner.setAdapter(adapter);
+        citySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
 
     private void locationRangeSeekBar(final SharedPreferences preferences){
@@ -146,4 +165,50 @@ public class MySettingsActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void darkMode() {
+        //Create the adapter and use the android default layouts for the spinner drop down
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.mode_array, R.layout.location_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        modeSpinner.setAdapter(adapter);
+
+
+        modeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0) {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                    //startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    setState("Toggle", true, getApplicationContext());
+                }
+                else {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    //startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    setState("Toggle", false, getApplicationContext());
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+    }
+
+    public static void setState(String key, Boolean value, Context context)
+    {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putBoolean(key, value);
+        editor.apply();
+    }
+
+    // Funciton to retrieve the switch state
+    public static Boolean getState(String key, Context context)
+    {
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+        return preferences.getBoolean(key, false);
+    }
 }
+
