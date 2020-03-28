@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
 
         List<Listing> listingList = null;
         try {
-            listingList = JsonUtils.loadProfiles(this.getApplicationContext(), "http://ec2-18-212-6-101.compute-1.amazonaws.com:3000/ottawa");
+            listingList = JsonUtils.loadProfiles(this.getApplicationContext(), "http://ec2-3-88-194-44.compute-1.amazonaws.com:3000/ottawa");
         } catch (ExecutionException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {

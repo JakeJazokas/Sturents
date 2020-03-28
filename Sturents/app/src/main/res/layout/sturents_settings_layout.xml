@@ -41,10 +41,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <Spinner
-                android:id="@+id/citySpinner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/colorBackground">
+
+                <Spinner
+                    android:id="@+id/citySpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
 
@@ -82,7 +89,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:background="@color/colorBackground">
+                android:background="@color/colorBackground"
+                android:paddingTop="10dip"
+                android:paddingBottom="10dip">
 
                 <SeekBar
                     android:id="@+id/seekBarLocationRange"
@@ -139,7 +148,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:background="@color/colorBackground">
+                android:background="@color/colorBackground"
+                android:paddingTop="10dip"
+                android:paddingBottom="10dip">
 
                 <SeekBar
                     android:id="@+id/seekBarPriceRange"
@@ -181,7 +192,7 @@
                 android:paddingRight="20dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
-                android:text="Dark Mode"/>
+                android:text="Theme"/>
 
         </androidx.cardview.widget.CardView>
 
@@ -192,11 +203,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <Spinner
-                android:id="@+id/modeSpinner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/colorBackground">
 
+                <Spinner
+                    android:id="@+id/modeSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
 
