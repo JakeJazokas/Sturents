@@ -10,6 +10,12 @@
             android:gravity="center"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"/>
-    <!--            android:src="@drawable/ic_profile"-->
-    <!--            android:background="#99badd"-->
+
+        <ImageView
+            android:id="@+id/btnContact2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"/>
 </LinearLayout>

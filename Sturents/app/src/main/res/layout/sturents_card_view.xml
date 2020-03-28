@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="10dp"
-        android:background="#ffffff"
+        android:background="@color/colorBackground"
         android:orientation="vertical"
         app:cardCornerRadius="7dp"
         app:cardElevation="4dp"
@@ -28,7 +28,8 @@
             android:layout_height="200dp"
             android:layout_gravity="bottom"
             android:gravity="start"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@color/colorBackground">
 
             <TextView
                 android:id="@+id/titleTxt"
@@ -48,9 +49,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:textColor="#333333"
+                android:textColor="@color/text_color"
                 android:textSize="14sp"
-                android:textStyle="normal" />
+                android:textStyle="normal"
+                android:background="@color/colorBackground"/>
 
         </LinearLayout>
 

@@ -11,6 +11,30 @@
                         "startOffsets": "55,125,209,293,389,491,593,687",
                         "endColumns": "69,83,83,95,101,101,93,88",
                         "endOffsets": "120,204,288,384,486,588,682,771"
+                    },
+                    "to": {
+                        "startLines": "8,9,10,11,12,13,14,15",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "339,409,493,577,673,775,877,971",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "404,488,572,668,770,872,966,1055"
+                    }
+                },
+                {
+                    "source": "D:\\NewComputerDocuments\\Sturents-Jake-Branch\\Sturents\\Sturents\\app\\src\\main\\res\\values-night\\colors.xml",
+                    "from": {
+                        "startLines": "4,6,2,3,7,8",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "157,206,57,105,257,303",
+                        "endColumns": "45,49,46,50,44,44",
+                        "endOffsets": "198,251,99,151,297,343"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,101,151,198,249,294",
+                        "endColumns": "45,49,46,50,44,44",
+                        "endOffsets": "96,146,193,244,289,334"
                     }
                 }
             ]

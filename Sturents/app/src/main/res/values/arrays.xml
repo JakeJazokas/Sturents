@@ -5,4 +5,9 @@
         <item>Montreal</item>
         <item>Toronto</item>
     </string-array>
+
+    <string-array name="mode_array">
+        <item>Light Mode</item>
+        <item>Dark Mode</item>
+    </string-array>
 </resources>
