@@ -24,12 +24,12 @@
         "source": "D:\\NewComputerDocuments\\Sturents-Jake-Branch\\Sturents\\Sturents\\app\\src\\main\\res\\layout\\location_spinner_item.xml"
     },
     {
-        "merged": "D:\\NewComputerDocuments\\Sturents-Jake-Branch\\Sturents\\Sturents\\app\\build\\intermediates\\res\\merged\\debug\\layout_sturents_user_listings.xml.flat",
-        "source": "D:\\NewComputerDocuments\\Sturents-Jake-Branch\\Sturents\\Sturents\\app\\src\\main\\res\\layout\\sturents_user_listings.xml"
-    },
-    {
         "merged": "D:\\NewComputerDocuments\\Sturents-Jake-Branch\\Sturents\\Sturents\\app\\build\\intermediates\\res\\merged\\debug\\layout_top_bar_layout_back.xml.flat",
         "source": "D:\\NewComputerDocuments\\Sturents-Jake-Branch\\Sturents\\Sturents\\app\\src\\main\\res\\layout\\top_bar_layout_back.xml"
+    },
+    {
+        "merged": "D:\\NewComputerDocuments\\Sturents-Jake-Branch\\Sturents\\Sturents\\app\\build\\intermediates\\res\\merged\\debug\\layout_sturents_user_listings.xml.flat",
+        "source": "D:\\NewComputerDocuments\\Sturents-Jake-Branch\\Sturents\\Sturents\\app\\src\\main\\res\\layout\\sturents_user_listings.xml"
     },
     {
         "merged": "D:\\NewComputerDocuments\\Sturents-Jake-Branch\\Sturents\\Sturents\\app\\build\\intermediates\\res\\merged\\debug\\drawable-night_ic_settings.png.flat",

@@ -41,17 +41,17 @@ public class RecyclerListingViewAdapter extends RecyclerView.Adapter<RecyclerLis
                 .load(getImageAtPosition(position))
                 .apply(RequestOptions.circleCropTransform())
                 .into(holder.myImageView);
-        //Create the swipe button via glide
+        //Create the contact swipe button via glide
         Glide.with(holder.myContactButton.getContext())
                 .load(R.drawable.ic_message_3)
                 .apply(RequestOptions.circleCropTransform())
                 .into(holder.myContactButton);
-
+        //Create the delete swipe button
         Glide.with(holder.myContactButton2.getContext())
                 .load(R.drawable.ic_cancel)
                 .apply(RequestOptions.circleCropTransform())
                 .into(holder.myContactButton2);
-
+        //Create a onclick listener for the delete button
         holder.myContactButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
