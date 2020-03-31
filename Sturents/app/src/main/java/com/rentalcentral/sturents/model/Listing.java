@@ -27,6 +27,52 @@ public class Listing implements Serializable {
     @Expose
     private int price;
 
+    @SerializedName("latitude")
+    @Expose
+    private double latitude;
+
+    @SerializedName("longitude")
+    @Expose
+    private double longitude;
+
+    @SerializedName("address")
+    @Expose
+    private String address;
+
+    private int locationDistance;
+
+    public int getLocationDistance() {
+        return locationDistance;
+    }
+
+    public void setLocationDistance(int locationDistance) {
+        this.locationDistance = locationDistance;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+
     public int getPrice() {
         return price;
     }

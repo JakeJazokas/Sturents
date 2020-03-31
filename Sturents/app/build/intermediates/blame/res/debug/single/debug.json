@@ -52,6 +52,10 @@
         "source": "D:\\NewComputerDocuments\\Sturents-Jake-Branch\\Sturents\\Sturents\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
+        "merged": "D:\\NewComputerDocuments\\Sturents-Jake-Branch\\Sturents\\Sturents\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_location.png.flat",
+        "source": "D:\\NewComputerDocuments\\Sturents-Jake-Branch\\Sturents\\Sturents\\app\\src\\main\\res\\drawable\\ic_location.png"
+    },
+    {
         "merged": "D:\\NewComputerDocuments\\Sturents-Jake-Branch\\Sturents\\Sturents\\app\\build\\intermediates\\res\\merged\\debug\\drawable-night_ic_my_listings.png.flat",
         "source": "D:\\NewComputerDocuments\\Sturents-Jake-Branch\\Sturents\\Sturents\\app\\src\\main\\res\\drawable-night\\ic_my_listings.png"
     },
