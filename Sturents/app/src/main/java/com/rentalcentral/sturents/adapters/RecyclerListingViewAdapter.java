@@ -120,6 +120,9 @@ public class RecyclerListingViewAdapter extends RecyclerView.Adapter<RecyclerLis
             intent.putExtra("listingImages", mListing.getImages());
             intent.putExtra("listingDescription", mListing.getFullDescription());
             intent.putExtra("listingTitle", mListing.getTitle());
+            //Send the price and distance to the new activity
+            intent.putExtra("listingPrice", mListing.getPrice());
+            intent.putExtra("listingDistance", mListing.getLocationDistance());
             v.getContext().startActivity(intent);
         }
     }

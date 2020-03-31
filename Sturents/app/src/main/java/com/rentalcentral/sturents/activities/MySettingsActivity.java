@@ -50,7 +50,7 @@ public class MySettingsActivity extends AppCompatActivity {
         SharedPreferences prefs = getDefaultSharedPreferences(getApplicationContext());
 
         //Call the methods to initialize listeners
-        placeSelectionDropdown();
+        placeSelectionDropdown(prefs);
         locationRangeSeekBar(prefs);
         priceRangeSeekBar(prefs);
         darkMode(prefs);
@@ -60,12 +60,35 @@ public class MySettingsActivity extends AppCompatActivity {
         actionBarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 finish();
+                overridePendingTransition(0,0);
+                //finish();
             }
         });
     }}
 
-    private void placeSelectionDropdown(){
+    private void placeSelectionDropdown(final SharedPreferences preferences){
+        //Read preferences from local storage
+        String key = "place_selection_prefs";
+        int default_int = -1;
+        final int return_value = preferences.getInt(key, default_int);
+        if(return_value == -1) {
+            citySpinner.post(new Runnable() {
+                @Override
+                public void run() {
+                    citySpinner.setSelection(0);
+                }
+            });
+        }
+        else{
+            citySpinner.post(new Runnable() {
+                @Override
+                public void run() {
+                    citySpinner.setSelection(return_value);
+                }
+            });
+        }
         //Create the adapter and use the android default layouts for the spinner drop down
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.cities_array, R.layout.location_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -73,7 +96,7 @@ public class MySettingsActivity extends AppCompatActivity {
         citySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
+                preferences.edit().putInt("place_selection_prefs", position).apply();
             }
 
             @Override
@@ -92,7 +115,7 @@ public class MySettingsActivity extends AppCompatActivity {
         int default_int = -1;
         int return_value = preferences.getInt(key, default_int);
         if(return_value == -1){
-            locationRangeSeek.setProgress(0);
+            locationRangeSeek.setProgress(150);
         }else{
             locationRangeSeek.setProgress(return_value);
         }
@@ -134,7 +157,7 @@ public class MySettingsActivity extends AppCompatActivity {
         int default_int = -1;
         int return_value = preferences.getInt(key, default_int);
         if(return_value == -1){
-            priceRangeSeek.setProgress(0);
+            priceRangeSeek.setProgress(3000);
         }else{
             priceRangeSeek.setProgress(return_value);
         }

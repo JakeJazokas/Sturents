@@ -64,6 +64,64 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/expandedPriceLocationBar"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="6dp"
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#e04f5f"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/locationIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_location"
+                    android:layout_toLeftOf="@id/locationIconText"/>
+
+                <TextView
+                    android:id="@+id/locationIconText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/expandedDivider"
+                    android:layout_marginRight="50dp"
+                    android:layout_centerVertical="true"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff" />
+
+                <View
+                    android:id="@+id/expandedDivider"
+                    android:layout_width="2dp"
+                    android:layout_height="35dp"
+                    android:background="#ffffff"
+                    android:layout_centerInParent="true" />
+
+                <TextView
+                    android:id="@+id/expandedPriceText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:layout_toRightOf="@+id/expandedDivider"
+                    android:layout_centerVertical="true"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
             android:id="@+id/expandedDescriptionBar"
             app:cardCornerRadius="6dp"
             app:cardElevation="5dp"

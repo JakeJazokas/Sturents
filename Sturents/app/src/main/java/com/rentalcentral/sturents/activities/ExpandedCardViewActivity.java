@@ -47,8 +47,18 @@ public class ExpandedCardViewActivity extends AppCompatActivity {
             String description = extras.getString("listingDescription");
             String title = extras.getString("listingTitle");
 
+            int price = extras.getInt("listingPrice");
+            int distance = extras.getInt("listingDistance");
+
             TextView expandedDescription = findViewById(R.id.expandedDescription);
             TextView expandedTitle = findViewById(R.id.expandedTitle);
+
+            TextView expandedLocation = findViewById(R.id.locationIconText);
+            TextView expandedPrice = findViewById(R.id.expandedPriceText);
+            String expandedLocationString = distance + "KM";
+            expandedLocation.setText(expandedLocationString);
+            String priceString = "$" + price;
+            expandedPrice.setText(priceString);
 
             expandedDescription.setText(description);
             expandedTitle.setText(title);

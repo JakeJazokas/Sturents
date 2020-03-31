@@ -2,8 +2,11 @@ package com.rentalcentral.sturents.ui;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.RequiresApi;
 
 import com.bumptech.glide.Glide;
 import com.mindorks.placeholderview.SwipePlaceHolderView;
@@ -34,6 +37,12 @@ public class RentalCardView {
     @View(R.id.descriptionTxt)
     private TextView descriptionTxt;
 
+    @View(R.id.priceLocText)
+    private TextView priceLocTxt;
+
+//    @View(R.id.priceText)
+//    private TextView priceTxt;
+
     private Listing mListing;
     private Context mContext;
     private SwipePlaceHolderView mSwipeView;
@@ -44,12 +53,15 @@ public class RentalCardView {
         mSwipeView = swipeView;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.P)
     @Resolve
     private void onResolved(){
         //Load the first image
         Glide.with(mContext).load(mListing.getFirstImage()).into(profileImageView);
         titleTxt.setText(mListing.getTitle());
         descriptionTxt.setText(mListing.getDescription());
+        String priceLocText = mListing.getLocationDistance() + "KM Away, " + mListing.getPrice() + "$/Month";
+        priceLocTxt.setText(priceLocText);
     }
 
     @Click(R.id.profileImageView)
@@ -61,6 +73,9 @@ public class RentalCardView {
         intent.putExtra("listingImages", mListing.getImages());
         intent.putExtra("listingDescription", mListing.getFullDescription());
         intent.putExtra("listingTitle", mListing.getTitle());
+        //Send the price and distance to the new activity
+        intent.putExtra("listingPrice", mListing.getPrice());
+        intent.putExtra("listingDistance", mListing.getLocationDistance());
         mContext.startActivity(intent);
     }
 

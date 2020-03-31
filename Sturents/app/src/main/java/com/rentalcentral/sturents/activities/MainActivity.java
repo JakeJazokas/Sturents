@@ -8,12 +8,19 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Point;
+import android.location.Address;
+import android.location.Geocoder;
+import android.location.Location;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageButton;
 
 import java.io.File;
+import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
@@ -70,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         }
 
-
         int bottomMargin = DisplayUtils.dpToPx(120);
         Point windowSize = DisplayUtils.getDisplaySize(getWindowManager());
         mSwipeView.getBuilder()
@@ -85,16 +91,54 @@ public class MainActivity extends AppCompatActivity {
                         .setSwipeOutMsgLayoutId(R.layout.sturents_swipe_out_msg_view));
 
         List<Listing> listingList = null;
+        // Check place location from preferences
+        String place_key = "place_selection_prefs";
+        int default_int = -1;
+        int place_return_value = prefs.getInt(place_key, default_int);
+        //Load the appropriate city
         try {
-            listingList = JsonUtils.loadProfiles(this.getApplicationContext(), "http://ec2-3-88-194-44.compute-1.amazonaws.com:3000/ottawa");
+            if(place_return_value == -1 || place_return_value == 0) {
+                listingList = JsonUtils.loadProfiles(this.getApplicationContext(), "http://ec2-34-207-165-62.compute-1.amazonaws.com:3000/ottawa");
+            }
+            else if(place_return_value == 1){
+                listingList = JsonUtils.loadProfiles(this.getApplicationContext(), "http://ec2-34-207-165-62.compute-1.amazonaws.com:3000/montreal");
+            }
+            else{
+                listingList = JsonUtils.loadProfiles(this.getApplicationContext(), "http://ec2-34-207-165-62.compute-1.amazonaws.com:3000/toronto");
+            }
         } catch (ExecutionException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
+        int locationFilter, priceFilter;
+        //Get the location range pref
+        String location_range_key = "location_range_pref";
+        int location_range_default_int = -1;
+        int location_range_return_value = prefs.getInt(location_range_key, location_range_default_int);
+        if(location_range_return_value == -1){
+            locationFilter = 150;
+        } else{
+            locationFilter = location_range_return_value;
+        }
+        //Get the price range pref
+        String price_range_key = "price_range_pref";
+        int price_range_default_int = -1;
+        int price_range_return_value = prefs.getInt(price_range_key, price_range_default_int);
+        if(price_range_return_value == -1){
+            priceFilter = 3000;
+        } else{
+            priceFilter = price_range_return_value;
+        }
+
         for(Listing listing : listingList){
-            mSwipeView.addView(new RentalCardView(mContext, listing, mSwipeView));
+            //Filter listings
+            int locationDistance = calculateDistance(listing, place_return_value);
+            listing.setLocationDistance(locationDistance);
+            if(listing.getPrice() <= priceFilter && locationDistance <= locationFilter) {
+                mSwipeView.addView(new RentalCardView(mContext, listing, mSwipeView));
+            }
         }
 
         findViewById(R.id.rejectBtn).setOnClickListener(new View.OnClickListener() {
@@ -130,4 +174,105 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    private int calculateDistance(Listing listing, int placeID) {
+        double cityLat, cityLong;
+
+        if(placeID == -1 || placeID == 0){
+            //Ottawa
+            cityLat = 45.4215;
+            cityLong = -75.6972;
+        }
+        else if(placeID == 1){
+            //Montreal
+            cityLat = 45.5017;
+            cityLong = -73.5673;
+        }
+        else{
+            //Toronto
+            cityLat = 43.6532;
+            cityLong = -79.3832;
+        }
+
+        Location locationA = new Location("City Center");
+
+        locationA.setLatitude(cityLat);
+        locationA.setLongitude(cityLong);
+
+        Location locationB = new Location("Listing Location");
+
+        locationB.setLatitude(listing.getLatitude());
+        locationB.setLongitude(listing.getLongitude());
+
+        float distance = locationA.distanceTo(locationB);
+//        Log.d("LATLONG", "locationlatlong: " + locationB.getLatitude() + " " + locationB.getLongitude());
+//        Log.d("DISTANCE", "calculateDistance: " +  distance/1000);
+        //Convert to km
+        return Math.round(distance/1000);
+    }
+
+//    private class GeoAsyncTask extends AsyncTask<String, Void, Integer> {
+//
+//        Listing listing;
+//        int placeID;
+//
+//        public GeoAsyncTask(Listing l, int pid){
+//            listing = l;
+//            placeID = pid;
+//        }
+//
+//        @Override
+//        protected Integer doInBackground(String... strings) {
+//            double cityLat, cityLong;
+//            Geocoder geocoder = new Geocoder(getApplicationContext());
+//
+//            List<Address> locationAddress = null;
+//            try {
+//                locationAddress = geocoder.getFromLocationName(listing.getAddress(), 1);
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//                return 150;
+//            }
+//
+//            if(placeID == -1 || placeID == 0){
+//                //Ottawa
+//                cityLat = 45.4215;
+//                cityLong = -75.6972;
+//            }
+//            else if(placeID == 1){
+//                //Montreal
+//                cityLat = 45.5017;
+//                cityLong = -73.5673;
+//            }
+//            else{
+//                //Toronto
+//                cityLat = 43.6532;
+//                cityLong = -79.3832;
+//            }
+//
+//            Location locationA = new Location("City Center");
+//
+//            locationA.setLatitude(cityLat);
+//            locationA.setLongitude(cityLong);
+//
+//            Location locationB = new Location("Listing Location");
+//
+////            locationB.setLatitude(listing.getLatitude());
+////            locationB.setLongitude(listing.getLongitude());
+//            if(locationAddress.size() > 0){
+//                locationB.setLatitude(locationAddress.get(0).getLatitude());
+//                locationB.setLongitude(locationAddress.get(0).getLongitude());
+//            } else {
+//                return 150;
+//            }
+//
+//            float distance = locationA.distanceTo(locationB);
+//
+//            Log.d("LATLONG", "locationlatlong: " + locationB.getLatitude() + " " + locationB.getLongitude());
+//            Log.d("DISTANCE", "calculateDistance: " +  distance/1000);
+//            //Convert to km
+//            return Math.round(distance/1000);
+//        }
+//
+//    }
 }

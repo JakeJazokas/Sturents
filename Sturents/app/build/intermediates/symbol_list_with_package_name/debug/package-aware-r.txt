@@ -742,6 +742,7 @@ drawable ic_hamburger
 drawable ic_heart
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_location
 drawable ic_message_3
 drawable ic_my_listings
 drawable ic_profile
@@ -865,7 +866,10 @@ id end
 id expand_activities_button
 id expandedDescription
 id expandedDescriptionBar
+id expandedDivider
 id expandedImageSlider
+id expandedPriceLocationBar
+id expandedPriceText
 id expandedTitle
 id expandedTitleBar
 id expanded_menu
@@ -892,6 +896,8 @@ id line1
 id line3
 id listMode
 id list_item
+id locationIcon
+id locationIconText
 id message
 id middle
 id modeSpinner
@@ -909,6 +915,7 @@ id pager_indicator
 id parent
 id parentPanel
 id percent
+id priceLocText
 id profileImageView
 id progress_circular
 id progress_horizontal

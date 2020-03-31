@@ -20,14 +20,14 @@ Sturents is an application that will scape listings for student rentals from the
  
 - [x] 2. Database  
   - [x] 2.1 Stores the parsed data from each listing  
-  - [ ] 2.2 Sends the data to the application depending on the users parameters (range, price, etc...) 
+  - [x] 2.2 Sends the data to the application depending on the users parameters (range, price, etc...) 
  
-- [ ] 3. Application  
+- [x] 3. Application  
   - [x] 3.1 Right / left swipe ‘cards’ on the main user interface    
     - [x] 3.1.1 Ability to click on a listing to view more information and or more images   
   - [x] 3.2 Ability to view a list of all right swiped listings    
     - [x] 3.2.1 Stores all listings locally on the users phone  
-  - [ ] 3.3 Send an email to the poster of a listing or go to webpage if no email was found  
+  - [x] 3.3 Send an email to the poster of a listing or go to webpage if no email was found  
   - [x] 3.4 Ability to change location, range, and price depending on the users requirements
   
  **Mockup:**
