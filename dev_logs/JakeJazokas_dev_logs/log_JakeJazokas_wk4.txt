@@ -1,0 +1,5 @@
+- Database planning, and figuring out how to get the scraper data onto the application
+
+- Reviewing android concepts.
+
+- Total Time spent : 3h 30min.

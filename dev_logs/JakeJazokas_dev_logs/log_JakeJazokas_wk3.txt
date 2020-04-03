@@ -1,0 +1,5 @@
+- Resarch and planning for the application
+	- Possibly switch to a node scraper instead of python
+	- Overarching design patterns for parts of the application	
+
+- Total Time spent : 3h
