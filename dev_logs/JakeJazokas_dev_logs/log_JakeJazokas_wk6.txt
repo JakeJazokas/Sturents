@@ -3,10 +3,6 @@
   
 - Added the ability to click on a card view and show an expanded version of that listing with more detail
 
-- Added icons to saved listings (also they are now in a card view with a custom adapter)
-
-- Added a image scroller to the expanded view to go through all the images for the listing
-
-- Made everything pretty.
+- Made everything pretty. (UI changes)
 
 - Total time : 7.5h

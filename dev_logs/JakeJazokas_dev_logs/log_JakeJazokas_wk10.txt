@@ -1,0 +1,15 @@
+- Added comments to the application
+
+- Fixed the dark mode styling for the spinner icons
+
+- Finished the application:
+	- Added filtering functionailty
+		- Filter listings by price, range, location.
+		- Added location parameters to the Listing objects (longitude and latitude)
+		- All filters are persistent
+	- Added a price and distance display to the expanded card view as well as the main card view
+	- Some UI changes
+
+- Worked on D4 document
+
+- Total time : 12h 30mins.

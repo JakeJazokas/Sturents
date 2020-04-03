@@ -1,0 +1,7 @@
+- Code reviews
+
+- Wrote most of the document for deliverable #3
+	- Identification, Architectural Patterns, Styles
+	- Design Patterns, System Design and Structure
+
+- Total time : 8h

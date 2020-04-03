@@ -1,0 +1,19 @@
+- Code refactoring 
+	- Remove unused imports
+	- Major refactoring to move files into packages
+		- Made code follow OOP
+
+- UI Changes:
+	- Changed some icons
+	- Changed the backgrounds to use a defined color
+	- Changed some elevations (adds a shadow behind the element)
+
+- Added a placeholder Settings Activity (Just a blank template for now)
+
+- Added icons to saved listings (also they are now in a card view with a custom adapter)
+	- Icons are accessed through a swipe action on the card view
+	- The icon will open the url for the listing when clicked
+
+- Added a image scroller to the expanded view to go through all the images for the listing
+
+- Total time : 12h

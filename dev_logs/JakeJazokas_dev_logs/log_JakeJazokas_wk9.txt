@@ -1,0 +1,22 @@
+- Added sliders to the UI for the location and the range
+
+- Added a dropdown for location selection
+
+- Added persistence for settings options
+
+- The saved listings are now persistent across application restart
+
+- Code reviews
+
+- Updated the pull listings function to take in a url string
+
+- The listings object now has a price parameter.
+
+- Added features with AJ:
+	- Redid the dark mode feature
+	- Also added persistence for dark mode 
+	- Added a remove button to the saved listings swipe menu
+	- Icon updates
+	- Locked orientation to portrait mode
+
+- Total time : 15h 30mins
