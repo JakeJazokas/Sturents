@@ -1,7 +1,7 @@
-- Deployed database using amazon' prime's RDS
+-Deployed database using amazon's RDS
     -Had to learn how to use RDS
     -Figuring out how to communicate with RDS server using PGadmin
 -Still trying to figure out how to properly store data
     -Learning how to read json's into RDS table
 
-- Total time : 3h.
+-Total time: 3h

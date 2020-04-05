@@ -1,0 +1,9 @@
+-Hoisted new scraper onto AWS EC2 Instance
+	-ditched using selenium due to issues
+	-Had to reconfigure instance to deal with new node module
+	-created cronjob to automate scraping
+-Database JSON
+	-Researching how to appropriately use a JSON with the database
+	-Attempting to learn how to query a JSON stored in database
+
+-Total Time: 5h

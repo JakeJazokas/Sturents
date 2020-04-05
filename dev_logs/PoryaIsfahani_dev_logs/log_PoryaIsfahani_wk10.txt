@@ -1,0 +1,7 @@
+-Adjusting Scraper and Database
+	-Adjusted scraper to push more information into database
+	-Adjusted scraper to now scrape for multiple regions
+	-Adjusted Database to store tables for specific regions
+	-Adjusted API to now have listings for multiple regions
+	
+-Total time: 10h
