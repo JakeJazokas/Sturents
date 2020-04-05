@@ -1,0 +1,7 @@
+-Created AWS student account
+   -Read through documentation on AWS website to familiarize self with software
+   -Deployed AWS EC2 server
+   -Initalized git repo on AWS server
+-Created powerpoint presentation for D1
+
+-Total time: 5h

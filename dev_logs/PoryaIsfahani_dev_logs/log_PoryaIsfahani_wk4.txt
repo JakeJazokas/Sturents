@@ -1,0 +1,6 @@
+-Discussed with back-end group memeber database schema, what content to store
+	-Launched RDS instance in AWS
+	-More documentation reading to better familiarize myself with RDS
+	-Attempted to set up database with PGadmin, need to learn how to properly use PGadmin.
+
+-Total time: 5h

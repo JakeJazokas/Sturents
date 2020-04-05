@@ -1,0 +1,6 @@
+-App makes a request to API for data
+	-Added code to the android app to request data from my API
+	-Learned about Async functions inside android to correctly pull information from the API
+	-App now immediately reads pulled data from API into inputstream to populate title cards instead of parsing data into a JSON file and populating cards based on JSON file
+	
+-Total time: 8h

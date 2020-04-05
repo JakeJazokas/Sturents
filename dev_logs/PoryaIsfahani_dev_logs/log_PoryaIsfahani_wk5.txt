@@ -1,0 +1,10 @@
+-Hoisted scraper onto amazon ec2 instance
+	-needed to install a bunch of dependancies 
+	-Scraper running into issues using selenium, attempting to resolve...
+-Connected ec2 instance to RDS
+	-Ditched PGadmin in favour of CLI psql
+	-created table
+	-need to resolve issue with scraper pushing data to json before inserting data into table
+-Created Diagrams for D2
+	
+-Total time: 6h

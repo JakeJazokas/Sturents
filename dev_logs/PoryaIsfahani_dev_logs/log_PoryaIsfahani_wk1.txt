@@ -1,0 +1,6 @@
+-Created the proposal document for deliverable one
+   -Brained storm with team project requirements
+   -Proposed use of AWS for our project
+   -Pitched App concept type (Using Tinder-esq style for our app)
+
+-Total time: 2h
