@@ -1,0 +1,4 @@
+-learning what jake implemented
+	-the ui aspect and how it interacts with each other in android studio
+
+total time spent: 3hrs

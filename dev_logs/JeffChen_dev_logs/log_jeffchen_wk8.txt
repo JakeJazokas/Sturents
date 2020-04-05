@@ -1,0 +1,4 @@
+-worked on location services UI
+-payment settings ui 
+
+-total time spent: 4 hours
