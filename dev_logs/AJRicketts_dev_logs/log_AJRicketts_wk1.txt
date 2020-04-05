@@ -1,0 +1,6 @@
+- Had zero experience with android / application devolopment
+- Began to learn about the different aspects that would go into the development
+- Engaged in discussion with group members to decide our function and non-functional properties
+
+
+- Total time spent: 3hrs

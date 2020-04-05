@@ -1,0 +1,4 @@
+- Continuing my learning of android development front-end
+- Discussed with group members how the back end would work so I had a better understanding of the overall application
+
+- Total Time Spent: 2hrs 30min.

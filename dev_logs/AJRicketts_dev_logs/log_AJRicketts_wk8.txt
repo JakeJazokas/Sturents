@@ -1,0 +1,7 @@
+- Wrote justifications for deliverable #3
+- Continued to optimize/finalize my previous code
+- Added more styling for dark mode
+- Added persitance for dark mode
+- Tried to work out bugs with overall app persistance
+
+-Total Time Spent: 5hrs 30mins.

@@ -1,0 +1,8 @@
+- Finished first version of dark mode
+	- Added styling for the various activies and its components
+	- Searched and found some icons to match the light version of the app
+	- Made the dark mode option in settings a switch instead of a button
+- Attempted to fix a bug with the switch in settings
+- Attempted to implement persistance for dark mode and the switch's state
+
+- Total Time Spent: 7hrs.
