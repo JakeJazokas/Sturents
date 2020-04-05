@@ -1,0 +1,4 @@
+- Discussed various parts of the application and the overall plan with group members
+- Reviewed group members code to gain a better understanding of android development and their coding style to better integrate with them
+
+- Total Time Spent: 3hrs
