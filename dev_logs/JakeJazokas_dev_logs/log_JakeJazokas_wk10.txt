@@ -11,5 +11,6 @@
 	- Some UI changes
 
 - Worked on D4 document
+	- Created the video for D4
 
-- Total time : 12h 30mins.
+- Total time : 16h 30mins.
