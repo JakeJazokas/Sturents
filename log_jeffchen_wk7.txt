@@ -1,0 +1,4 @@
+-in my branch
+	-added a slider for location and price range
+	-added a pop-up for location
+total time spent :4h
