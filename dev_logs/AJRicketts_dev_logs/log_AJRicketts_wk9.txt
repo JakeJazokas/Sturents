@@ -1,0 +1,10 @@
+- Added features with Jake:
+	- Redid the dark mode feature (initialization of dark mode not styling)
+	- Changed settings option on dark mode from a switch to a spinner 
+	- Added better persistence for dark mode 
+	- Added a remove button to the saved listings swipe menu
+	- Updated multiple buttons
+	- Locked orientation to portrait mode
+
+- Total Time Spent: 8hrs.
+

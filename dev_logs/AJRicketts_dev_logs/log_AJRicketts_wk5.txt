@@ -1,0 +1,5 @@
+- Added input on certain design decisions as the first bit of the ui was developed
+- Reviewed code to gain a better understanding on ui development
+- Searched for bugs / features to be added in the application thus far
+
+- Total Time Spent: 3hrs 30min.

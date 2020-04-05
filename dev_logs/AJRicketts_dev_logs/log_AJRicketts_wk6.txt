@@ -1,0 +1,4 @@
+- Started work on the dark mode styling for the application
+- Working on learning about persitance and saved preferences as that is needed to be implimented soon
+
+-Total Time Spent: 5hrs.

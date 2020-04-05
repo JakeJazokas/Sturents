@@ -1,0 +1,5 @@
+- Application is now done
+- Worked on D4 document
+	- Specifically the problems we had and how / why we changed them
+
+Total Time Spent: 3hrs.

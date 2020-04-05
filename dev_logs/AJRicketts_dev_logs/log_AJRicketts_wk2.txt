@@ -1,0 +1,3 @@
+- Continued to learn about android studio and android development to be prepared to work on the front-end of the application when the time comes.
+
+- Total time: 1h 30 min
