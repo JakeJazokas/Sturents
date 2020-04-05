@@ -1,0 +1,3 @@
+-set up android studio and libraries needed
+
+-total time spent: 2 hours
