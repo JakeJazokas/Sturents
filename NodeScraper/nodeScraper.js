@@ -9,7 +9,7 @@ const pool = new Pool({
         user: "postgres",
         host: "rentalcentral.c7gdjiu5zeuo.us-east-1.rds.amazonaws.com",
         database: "nodescraper",
-        password: "student123",
+        password: "",
         port: "5432"
 });
 
